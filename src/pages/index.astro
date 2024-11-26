@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+// import Slide from '../components/Slide.astro';
+---
+<link rel="stylesheet" href="/src/styles/index.css">
+<script src="/src/styles/js/index.js" defer></script>
+
+
+<Layout title="Landing Page">
+	<div class="container">
+		<!-- Navigation -->
+		<nav id="navigation" class="navigation hidden">
+			<ul>
+				<li><a href="#slide1">Slide 1</a></li>
+				<li><a href="#slide2">Slide 2</a></li>
+				<li><a href="#slide3">Slide 3</a></li>
+				<li><a href="#slide4">Slide 4</a></li>
+				<li><a href="#slide5">Slide 5</a></li>
+				<li><a href="#slide6">Slide 6</a></li>
+				<li><a href="#slide7">Slide 7</a></li>
+			</ul>
+		</nav>
+		<!-- Slides -->
+		<section id="slide1" class="slide">
+			<video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+				<source src="src/media/logo fix 5.mp4" type="video/mp4" />
+				Your browser does not support the video tag.
+			</video>
+	
+		</section>
+		
+		<section id="slide2" class="slide" style="background: #33C4FF;">
+			<h1>Slide 2</h1>
+			<p>Here is some more information about your product.</p>
+		</section>
+
+		<section id="slide3" class="slide" style="background: #7DFF33;">
+			<h1>Slide 3</h1>
+			<p>Describe your features or services here.</p>
+		</section>
+
+		<section id="slide4" class="slide" style="background: #FF33A8;">
+			<h1>Slide 4</h1>
+			<p>Engage your users with visually appealing content.</p>
+		</section>
+
+		<section id="slide5" class="slide" style="background: #FFC733;">
+			<h1>Slide 5</h1>
+			<p>Share testimonials or case studies.</p>
+		</section>
+
+		<section id="slide6" class="slide" style="background: #8D33FF;">
+			<h1>Slide 6</h1>
+			<p>Invite users to take action.</p>
+		</section>
+
+		<section id="slide7" class="slide" style="background: #33FFAC;">
+			<h1>Thank You</h1>
+			<p>End your landing page with a strong call-to-action.</p>
+		</section>
+	</div>
+</Layout>
+
+<style>
+
+</style>
