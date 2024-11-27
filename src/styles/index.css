@@ -169,38 +169,52 @@ body, html {
 .language{
   padding: 4px;
 }
-
-.container-slide3{
+.container-slide3 {
+  margin-right: 9em;
   display: flex;
-  justify-content: space-between; /* Chia không gian đều cho hai bên */
+  justify-content: space-between;
   align-items: flex-start;
+  gap: 2rem;
 }
 
 .yg-team, .description-team {
-  flex: 1; /* Mỗi div chiếm 50% không gian */
-  margin: 10px; 
+  flex: 1; /* Mỗi div chiếm không gian tương đối bằng nhau */
+  max-width: 48%; /* Giới hạn chiều rộng mỗi div (đảm bảo không vượt quá 50%) */
+  margin: 0; /* Xóa khoảng cách thừa */
 }
 
 .yg-team h1, .yg-team h2, .yg-team p,
 .description-team h2, .description-team p {
-  margin-bottom: 20px; 
+  margin-bottom: 20px; /* Tạo khoảng cách giữa các phần tử */
+  line-height: 1.6; /* Giãn dòng cho văn bản */
 }
 
-.yg-team h1{
+.yg-team h1 {
   font-size: 4rem;
   font-weight: 300;
-  font-family: 'Roboto', sans-serif; 
-  margin-bottom:-41px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: -1.5em;
+
 }
+
 .yg-team .big-sign {
   font-size: 14rem;
   font-weight: bold;
   color: #fa8500;
-  margin-bottom: -24px;
-
+  margin-bottom: -24px; /* Điều chỉnh khoảng cách */
 }
-.yg-team p{
-  font-weight: bold;  
-  font-style: italic; 
-  display: block; 
+
+.yg-team p {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.description-team p {
+  text-align: justify; /* Canh đều hai bên văn bản */
+}
+
+.yg-team{
+  margin-left: 5em;
+  margin-right: -5em;
+  text-align: justify;
 }
