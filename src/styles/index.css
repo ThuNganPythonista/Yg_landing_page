@@ -1,3 +1,11 @@
+
+* {
+    box-sizing: border-box; /* Đảm bảo padding và border không vượt quá chiều rộng */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Ngừng thanh cuộn ngang */
+    overflow-y: hidden; /* Ngừng thanh cuộn dọc nếu không cần */
+}
 .navigation {
     position: fixed;
     top: 0;
@@ -7,10 +15,13 @@
     z-index: 10;
     padding: 1rem 2rem;
 }
+
 .navigation.hidden {
-  opacity: 0;
-  visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
 }
+
 .navigation ul {
     display: flex;
     justify-content: flex-end; /* Đẩy các item sang bên trái */
@@ -20,31 +31,45 @@
     padding: 0;
 }
 
-.navigation a {
+.navigation a,
+.list-item a {
     color: white;
     text-decoration: none;
     padding: 0.75rem 1.25rem;
     font-size: 1rem;
     font-weight: 600;
     border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.navigation a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Optional: Tạo hiệu ứng khi hover trên link */
 .navigation a:focus,
-.navigation a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+.navigation a:hover,
+.list-item a:hover {
+    color: orange; /* Màu chữ khi hover */
+    background-color: transparent; /* Không thay đổi màu nền */
+    transform: scale(1.1); /* Phóng to một chút */
+    opacity: 0.8; /* Tăng độ mờ cho phần tử */
 }
 
+
+body, html {
+    margin: 0;
+    padding: 0;
+    
+    overflow-x: hidden; /* Ngừng thanh cuộn ngang */
+    overflow-y: hidden; /* Ngừng thanh cuộn dọc nếu không cần */
+}
 .container {
     padding-top: 80px; /* Giữ khoảng cách với thanh điều hướng cố định */
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
+    padding-top: 0; /* Điều chỉnh lại padding nếu cần */
+
+}
+/* Ẩn thanh cuộn */
+.container::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn */
 }
 
 .slide {
@@ -56,9 +81,91 @@
     align-items: center;
     color: white;
     text-align: center;
-    padding: 2rem;
+    /* padding: 2rem; */
 }
 #slide1{
     margin-bottom: -1em;
 }
 
+/* Basic section styles */
+.about-section {
+    font-family: Arial, sans-serif;
+    width: 80%;
+    margin-top: 5%;
+  }
+  
+  /* Title style */
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 24em;
+  }
+  
+  /* Highlighted word */
+  .highlight {
+    color: orange;
+  }
+  
+  /* List container */
+  .list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  /* List items */
+  .list-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem; /* equivalent to text-lg */
+    color: white; /* equivalent to text-gray-700 */
+    margin-bottom: 16px; /* space-y-4 equivalent */
+  }
+  
+  /* Icon style */
+  .icon {
+    font-size: 1.5rem; /* equivalent to text-2xl */
+    margin-right: 12px; /* equivalent to mr-3 */
+  }
+  
+  /* Specific icon colors */
+  .service-icon {
+    color: blue;
+  }
+  
+  .project-icon {
+    color: green;
+  }
+  
+  .customer-icon {
+    color: yellow;
+  }
+  
+  .contact-icon {
+    color: red;
+  }
+ /* Định dạng nút chuyển ngôn ngữ */
+.language-toggle {
+  background: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+  font-size: x-small;
+  font-weight: 100;
+  color: white;
+  padding: 2px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.language-toggle:hover {
+  background-color: #f3f3f3; /* Màu nền khi hover */
+  color: #ff6600; /* Màu chữ khi hover */
+}
+
+.language-toggle .language.active {
+  color: #ff6600; /* Màu của ngôn ngữ được chọn */
+  font-weight: bold;
+}
+.language{
+  padding: 4px;
+}
