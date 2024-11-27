@@ -163,9 +163,44 @@ body, html {
 }
 
 .language-toggle .language.active {
-  color: #ff6600; /* Màu của ngôn ngữ được chọn */
+  color: #ff6600;
   font-weight: bold;
 }
 .language{
   padding: 4px;
+}
+
+.container-slide3{
+  display: flex;
+  justify-content: space-between; /* Chia không gian đều cho hai bên */
+  align-items: flex-start;
+}
+
+.yg-team, .description-team {
+  flex: 1; /* Mỗi div chiếm 50% không gian */
+  margin: 10px; 
+}
+
+.yg-team h1, .yg-team h2, .yg-team p,
+.description-team h2, .description-team p {
+  margin-bottom: 20px; 
+}
+
+.yg-team h1{
+  font-size: 4rem;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif; 
+  margin-bottom:-41px;
+}
+.yg-team .big-sign {
+  font-size: 14rem;
+  font-weight: bold;
+  color: #fa8500;
+  margin-bottom: -24px;
+
+}
+.yg-team p{
+  font-weight: bold;  
+  font-style: italic; 
+  display: block; 
 }
