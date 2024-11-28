@@ -259,17 +259,11 @@ body, html {
 }
 
 .box-container {
-  width: 253px;
-  height: 214px;
-  background-color: #222222;
+  gap: 2em;
   color: white;
-  display: flex
-;
+  display: flex;
   justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 8px;
+  text-align: left;
 
 }
 
@@ -297,12 +291,98 @@ body, html {
 .box-title {
   font-size: 1.5rem; /* Kích thước chữ to */
   font-weight: bold;
-  color: #333;
+  color: #fa8500;
   margin-bottom: 8px;
 }
 
 .box-description {
   font-size: 1rem; /* Kích thước chữ nhỏ */
-  color: #666;
+  color: white;
   line-height: 1.4;
+}
+.box {
+  background-color : #222222;
+  width: 250.16px; 
+  padding : 2em;
+  border-radius: 10px;
+
+} 
+
+.slide5-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+.slide5-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #fa8500;
+}
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 20px; /* Khoảng cách giữa các video */
+}
+
+.video {
+  position: relative;
+  width: 80%; /* Chiều rộng video */
+  max-width: 800px;
+  transition: opacity 0.5s ease-in-out; /* Hiệu ứng mờ dần */
+}
+
+.current-video {
+  z-index: 10; /* Video đang phát nằm ở trên cùng */
+}
+
+.previous-video, .next-video {
+  opacity: 0.5; /* Làm mờ video trước và video tiếp theo */
+}
+
+.video video {
+  width: 100%;
+  height: auto;
+}
+
+.video-container:hover .previous-video, .video-container:hover .next-video {
+  opacity: 1; /* Khi hover, làm sáng video trước và tiếp theo */
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Khoảng cách giữa các nút */
+}
+
+.controls button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid;
+}
+.circle-btn {
+  width: 50px; /* Kích thước hình tròn */
+  height: 50px; 
+  border-radius: 50%; /* Biến nút thành hình tròn */
+  background-color: #333; /* Màu nền */
+  color: white; /* Màu ký tự */
+  font-size: 1.5rem; /* Kích thước dấu >, < */
+  border: none; /* Xóa viền mặc định */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.circle-btn:hover {
+  background-color: #fa8500; /* Màu nền khi hover */
+}
+
+.circle-btn:disabled {
+  /* background-color: #555; Màu nút khi disabled */
+  cursor: not-allowed;
 }
