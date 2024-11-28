@@ -258,7 +258,7 @@ body, html {
   gap: 1rem; /* Khoảng cách giữa các ô */
 }
 
-.box {
+.box-container {
   width: 253px;
   height: 214px;
   background-color: #222222;
@@ -286,4 +286,23 @@ body, html {
 .commitment p,
 .description-team p{
   font-size : 15px;
+}
+
+.box i {
+  font-size: 2.5rem; /* Kích thước icon */
+  color: #fa8500; /* Màu icon */
+  margin-bottom: 10px;
+}
+
+.box-title {
+  font-size: 1.5rem; /* Kích thước chữ to */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.box-description {
+  font-size: 1rem; /* Kích thước chữ nhỏ */
+  color: #666;
+  line-height: 1.4;
 }
