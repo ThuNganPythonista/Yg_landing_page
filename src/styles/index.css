@@ -201,7 +201,7 @@ body, html {
   font-size: 14rem;
   font-weight: bold;
   color: #fa8500;
-  margin-bottom: -24px; /* Điều chỉnh khoảng cách */
+  margin-bottom: -72px; 
 }
 
 .yg-team p {
@@ -217,4 +217,15 @@ body, html {
   margin-left: 5em;
   margin-right: -5em;
   text-align: justify;
+}
+
+.description-team{
+  margin-top: 2em;
+}
+
+.title-text {
+  text-align: left;
+  text-align: left;
+  font-size: xx-large;
+  color: #fa8500;
 }
