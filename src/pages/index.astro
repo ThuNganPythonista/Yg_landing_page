@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import AboutUs from '../components/aboutUs.astro';
 import Text from '../components/text.astro'
+import Service from '../components/service.astro'
 ---
 <link rel="stylesheet" href="/src/styles/index.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
@@ -10,7 +11,6 @@ import Text from '../components/text.astro'
 
 <Layout title="Landing Page">
 	<div class="container">
-		<!-- Navigation -->
 		<nav id="navigation" class="navigation hidden">
 			<ul>
 				<li><a href="#slide2">Trang chủ</a></li>
@@ -26,7 +26,6 @@ import Text from '../components/text.astro'
 				</li>
 			</ul>
 		</nav>
-		<!-- Slides -->
 		<section id="slide1" class="slide">
 			<video autoplay muted loop playsinline class="w-[100%] h-[100%] object-cover" style="max-width: 100%; max-height: 100%;">
 				<source src="src/media/logo fix 5.mp4" type="video/mp4" />
@@ -43,9 +42,8 @@ import Text from '../components/text.astro'
 			<Text />
 		</section>
 
-		<section id="slide4" class="slide" style="background: #FF33A8;">
-			<h1>Slide 4</h1>
-			<p>Engage your users with visually appealing content.</p>
+		<section id="slide4" class="slide" style="background: blue;">
+			<Service />
 		</section>
 
 		<section id="slide5" class="slide" style="background: #FFC733;">
