@@ -1,68 +1,75 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import AboutUs from '../components/aboutUs.astro';
-import Text from '../components/text.astro'
-import Service from '../components/service.astro'
-import Project from '../components/prj.astro'
+import Layout from "../layouts/Layout.astro";
+import AboutUs from "../components/aboutUs.astro";
+import Text from "../components/text.astro";
+import Service from "../components/service.astro";
+import Project from "../components/prj.astro";
 ---
-<link rel="stylesheet" href="/src/styles/index.css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-<script src="/src/styles/js/index.js" defer></script>
 
+<link rel="stylesheet" href="/src/styles/index.css" />
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  rel="stylesheet"
+/>
+<link href="/dist/styles.css" rel="stylesheet" />
+<script src="/src/styles/js/index.js"></script>
 
 <Layout title="Landing Page">
-	<div class="container">
-		<nav id="navigation" class="navigation hidden">
-			<ul>
-				<li><a href="#slide2">Trang chủ</a></li>
-				<li><a href="#slide3">Về chúng tôi</a></li>
-				<li><a href="#slide4">Dịch vụ</a></li>
-				<li><a href="#slide5">Dự án</a></li>
-				<li><a href="#slide6">Khách hàng</a></li>
-				<li><a href="#slide7">Liên hệ</a></li>
-				<li>
-					<button id="language-toggle" class="language-toggle">
-					  <span class="language">VI</span> | <span class="language">EN</span>
-					</button>
-				</li>
-			</ul>
-		</nav>
-		<section id="slide1" class="slide">
-			<video autoplay muted loop playsinline class="w-[100%] h-[100%] object-cover" style="max-width: 100%; max-height: 100%;">
-				<source src="src/media/logo fix 5.mp4" type="video/mp4" />
-			</video>
-	
-		</section>
-		
-		<section id="slide2" class="slide" style="background: black;">
-			<AboutUs />
+  <div class="container">
+    <nav id="navigation" class="navigation hidden">
+      <ul>
+        <li><a href="#slide2">Trang chủ</a></li>
+        <li><a href="#slide3">Về chúng tôi</a></li>
+        <li><a href="#slide4">Dịch vụ</a></li>
+        <li><a href="#slide5">Dự án</a></li>
+        <li><a href="#slide6">Khách hàng</a></li>
+        <li><a href="#slide7">Liên hệ</a></li>
+        <li>
+          <button id="language-toggle" class="language-toggle">
+            <span class="language">VI</span> | <span class="language">EN</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <section id="slide1" class="slide">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="w-[100%] h-[100%] object-cover"
+        style="max-width: 100%; max-height: 100%;"
+      >
+        <source src="src/media/logo fix 5.mp4" type="video/mp4" />
+      </video>
+    </section>
 
-		</section>
+    <section id="slide2" class="slide" style="background: black;">
+      <AboutUs />
+    </section>
 
-		<section id="slide3" class="slide" style="background: grey;">
-			<Text />
-		</section>
+    <section id="slide3" class="slide" style="background: grey;">
+      <Text />
+    </section>
 
-		<section id="slide4" class="slide" style="background: blue;">
-			<Service />
-		</section>
+    <section id="slide4" class="slide" style="background: blue;">
+      <Service />
+    </section>
 
-		<section id="slide5" class="slide" style="background: purple;">
-			<Project />
-		</section>
+    <section id="slide5" class="slide" style="background: purple;">
+      <Project />
+    </section>
 
-		<section id="slide6" class="slide" style="background: #8D33FF;">
-			<h1>Slide 6</h1>
-			<p>Invite users to take action.</p>
-		</section>
+    <section id="slide6" class="slide" style="background: #8D33FF;">
+      <h1>Slide 6</h1>
+      <p>Invite users to take action.</p>
+    </section>
 
-		<section id="slide7" class="slide" style="background: #33FFAC;">
-			<h1>Thank You</h1>
-			<p>End your landing page with a strong call-to-action.</p>
-		</section>
-	</div>
+    <section id="slide7" class="slide" style="background: #33FFAC;">
+      <h1>Thank You</h1>
+      <p>End your landing page with a strong call-to-action.</p>
+    </section>
+  </div>
 </Layout>
 
-<style>
-
-</style>
+<style></style>

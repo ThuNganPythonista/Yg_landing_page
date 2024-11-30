@@ -66,39 +66,4 @@ document.getElementById('language-toggle').addEventListener('click', function ()
     anchor.textContent = translationMap[newLanguage][href];
   });
 });
-////cập nhật video
-let currentIndex = 0;
-const videos = [
-  "video-1.mp4",
-  "video-2.mp4",
-  "video-3.mp4"
-];
 
-const videoContainer = document.querySelector('.video-container');
-const currentVideoElement = document.querySelector('.current-video video');
-const previousVideoElement = document.querySelector('.previous-video video');
-const nextVideoElement = document.querySelector('.next-video video');
-
-function changeVideo() {
-  // Cập nhật video hiện tại
-  currentVideoElement.src = videos[currentIndex];
-  
-  // Cập nhật video tiếp theo và video trước
-  previousVideoElement.src = videos[(currentIndex - 1 + videos.length) % videos.length];
-  nextVideoElement.src = videos[(currentIndex + 1) % videos.length];
-}
-
-// Previous Button Logic
-document.getElementById('prevBtn').addEventListener('click', function() {
-  currentIndex = (currentIndex - 1 + videos.length) % videos.length;
-  changeVideo();
-});
-
-// Next Button Logic
-document.getElementById('nextBtn').addEventListener('click', function() {
-  currentIndex = (currentIndex + 1) % videos.length;
-  changeVideo();
-});
-
-// Đầu tiên gọi changeVideo để hiển thị video đầu tiên
-changeVideo();
