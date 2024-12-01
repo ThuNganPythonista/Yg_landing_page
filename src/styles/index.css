@@ -50,10 +50,10 @@
 .navigation a:focus,
 .navigation a:hover,
 .list-item a:hover {
-  color: orange; /* Màu chữ khi hover */
-  background-color: transparent; /* Không thay đổi màu nền */
+  color: orange;
+  background-color: transparent;
   transform: scale(1.1); /* Phóng to một chút */
-  opacity: 0.8; /* Tăng độ mờ cho phần tử */
+  opacity: 0.8;
 }
 
 body,
@@ -61,22 +61,21 @@ html {
   margin: 0;
   padding: 0;
 
-  overflow-x: hidden; /* Ngừng thanh cuộn ngang */
-  overflow-y: hidden; /* Ngừng thanh cuộn dọc nếu không cần */
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .container {
-  padding-top: 80px; /* Giữ khoảng cách với thanh điều hướng cố định */
+  padding-top: 80px;
 
-  /* TODO: re-enable this */
-  /* scroll-snap-type: y mandatory; */
+  scroll-snap-type: y mandatory;
 
   overflow-y: scroll;
   height: 100vh;
-  padding-top: 0; /* Điều chỉnh lại padding nếu cần */
+  padding-top: 0;
 }
 /* Ẩn thanh cuộn */
 .container::-webkit-scrollbar {
-  display: none; /* Ẩn thanh cuộn */
+  display: none;
 }
 
 .slide {
@@ -94,48 +93,41 @@ html {
   margin-bottom: -1em;
 }
 
-/* Basic section styles */
 .about-section {
   font-family: Arial, sans-serif;
   width: 80%;
   margin-top: 5%;
 }
 
-/* Title style */
 .title {
   font-size: 2rem;
   font-weight: bold;
   margin-right: 26em;
 }
 
-/* Highlighted word */
 .highlight {
   color: orange;
 }
 
-/* List container */
 .list {
   list-style-type: none;
   padding: 0;
   margin-top: 20px;
 }
 
-/* List items */
 .list-item {
   display: flex;
   align-items: center;
-  font-size: 1.125rem; /* equivalent to text-lg */
-  color: white; /* equivalent to text-gray-700 */
-  margin-bottom: 16px; /* space-y-4 equivalent */
+  font-size: 1.125rem;
+  color: white;
+  margin-bottom: 16px;
 }
 
-/* Icon style */
 .icon {
-  font-size: 1.5rem; /* equivalent to text-2xl */
-  margin-right: 12px; /* equivalent to mr-3 */
+  font-size: 1.5rem;
+  margin-right: 12px;
 }
 
-/* Specific icon colors */
 .service-icon {
   color: blue;
 }
@@ -263,9 +255,9 @@ html {
 /* Div 2: Bốn ô vuông nằm ngang */
 .four-boxes {
   display: flex;
-  justify-content: space-around; /* Chia đều khoảng cách giữa các ô */
+  justify-content: space-around;
   flex-wrap: wrap; /* Cho phép ô vuông xuống hàng trên màn hình nhỏ */
-  gap: 1rem; /* Khoảng cách giữa các ô */
+  gap: 1rem;
 }
 
 .box-container {
@@ -276,7 +268,6 @@ html {
   text-align: left;
 }
 
-/* Div 3: Dòng chữ cam kết */
 .commitment p {
   font-size: 1.25rem;
   line-height: 1.6;
@@ -290,20 +281,20 @@ html {
 }
 
 .box i {
-  font-size: 2.5rem; /* Kích thước icon */
-  color: #fa8500; /* Màu icon */
+  font-size: 2.5rem;
+  color: #fa8500;
   margin-bottom: 10px;
 }
 
 .box-title {
-  font-size: 1.5rem; /* Kích thước chữ to */
+  font-size: 1.5rem;
   font-weight: bold;
   color: #fa8500;
   margin-bottom: 8px;
 }
 
 .box-description {
-  font-size: 1rem; /* Kích thước chữ nhỏ */
+  font-size: 1rem;
   color: white;
   line-height: 1.4;
 }
@@ -312,4 +303,51 @@ html {
   width: 250.16px;
   padding: 2em;
   border-radius: 10px;
+}
+/* 
+/* slide6 */
+.slide6-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: #f8f9fa; */
+  padding: 40px 20px;
+  /* margin-bottom: 10em; */
+}
+
+.slide6-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fa8500;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.slide6-description {
+  margin-bottom: 64px;
+  text-align: center;
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+  justify-items: center;
+}
+
+.logo-item img {
+  width: 100px;
+  height: auto;
+  filter: grayscale(1);
+  transition:
+    filter 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+}
+
+.logo-item img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
 }
