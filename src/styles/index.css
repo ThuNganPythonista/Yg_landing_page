@@ -159,8 +159,8 @@ html {
 }
 
 .language-toggle:hover {
-  background-color: #f3f3f3; /* Màu nền khi hover */
-  color: #ff6600; /* Màu chữ khi hover */
+  background-color: #f3f3f3;
+  color: #ff6600;
 }
 
 .language-toggle .language.active {

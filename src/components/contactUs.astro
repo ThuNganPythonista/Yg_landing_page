@@ -1,0 +1,184 @@
+<div class="contact">
+  <!-- Phần bên trái: Thông tin liên hệ -->
+  <div class="inf">
+    <h1>Liên hệ</h1>
+    <div class="item-contact">
+      <i class="fa-solid fa-phone"></i>
+      <span>
+        Hotline<br />
+        <strong>(+84) 377 711 139</strong>
+      </span>
+    </div>
+    <div class="div-class"></div>
+
+    <div class="item-contact">
+      <i class="fas fa-envelope" aria-hidden="true"></i>
+      <span>
+        Email<br />
+        <strong>YGAGENCY@gmail.com</strong>
+      </span>
+      <div class="div-class"></div>
+    </div>
+    <div class="div-class"></div>
+
+    <div class="item-contact">
+      <i class="fas fa-map-marker-alt" style="width:13%" aria-hidden="true"></i>
+      <span>
+        Địa chỉ<br />
+        <strong>288/10 Nguyễn Văn Đậu, Bình Thạnh, TP. Hồ Chí Minh</strong>
+      </span>
+    </div>
+    <div class="div-class"></div>
+
+    <div class="social-icons">
+      <strong>Theo dõi chúng tôi</strong>
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://zalo.me" target="_blank" aria-label="Zalo">
+        <img
+          src="src/media/icon/zalowhite.svg"
+          alt="Zalo"
+          width="40"
+          height="40"
+        />
+      </a>
+
+      <a href="https://www.whatsapp.com" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Phần bên phải: Form liên hệ -->
+  <div class="contact-form">
+    <h2>Liên Hệ Với Chúng Tôi</h2>
+    <form action="/submit-contact" method="POST">
+      <div>
+        <label for="name">Tên:</label><br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Nhập tên của bạn"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="phone">Điện thoại:</label><br />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Nhập số điện thoại"
+          pattern="[0-9]{10,11}"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="email">Email:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Nhập địa chỉ email"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="message">Lời nhắn:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Nhập lời nhắn của bạn"
+          required></textarea>
+      </div>
+      <br />
+      <button type="submit">Gửi</button>
+    </form>
+  </div>
+</div>
+
+<!-- Phần bản quyền -->
+<div class="rights">
+  <p>© 2024 YG. All rights reserved.</p>
+  <img src="logo.png" alt="Logo YG" />
+</div>
+
+<style>
+  .contact {
+    display: flex;
+    gap: 10em;
+  }
+
+  .contact .inf,
+  .contact .contact-form {
+    flex: 1;
+    display: inline-grid;
+    text-align: left;
+  }
+
+  .item-contact {
+    display: flex;
+    gap: 1em;
+  }
+  .item-contact i {
+    width: 10%;
+    color: #fa8500;
+  }
+  .inf h1 {
+    font-size: xxx-large;
+    color: #fa8500;
+  }
+  .contact .inf {
+    max-width: 50%; /* Hạn chế độ rộng tối đa */
+  }
+  a {
+    text-decoration: none; /* Loại bỏ gạch dưới */
+  }
+
+  .div-class {
+    border-bottom: 2px solid #fa8500; /* Đường viền dưới màu cam */
+    padding-bottom: 10px; /* Thêm một chút khoảng cách dưới viền */
+  }
+
+  .contact-form form {
+    display: flex;
+    flex-direction: column; /* Sắp xếp các input và button theo cột */
+    gap: 15px; /* Khoảng cách giữa các phần tử */
+  }
+
+  .social-icons a {
+    margin-right: 10px;
+  }
+
+  .hotline span,
+  .email span,
+  .address span {
+    display: block; /* Sử dụng flex để chúng hiển thị trong cùng một dòng */
+    align-items: center; /* Canh chỉnh các phần tử con theo chiều dọc */
+  }
+
+  .fa-facebook-f,
+  .fa-whatsapp,
+  .fa-youtube,
+  .fa-phone,
+  .fa-envelope,
+  .fa-map-marker-alt {
+    display: inline-block; /* Để có thể áp dụng width và height */
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    /* background-color: #3b5998; */
+    color: #ffffff;
+  }
+</style>
