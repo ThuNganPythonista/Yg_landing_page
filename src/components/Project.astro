@@ -1,0 +1,19 @@
+<div class="slideshow-container">
+  <i class="fa-solid fa-chevron-left"></i>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      {
+        Array.from({ length: 5 }).map(() => (
+          <div class="swiper-slide">
+            <video loop>
+              <source src="/src/media/logo fix 5.mp4" type="video/mp4" />
+            </video>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <i class="fa-solid fa-chevron-right"></i>
+</div>
+
+<script src="/src/styles/js/project.ts"></script>

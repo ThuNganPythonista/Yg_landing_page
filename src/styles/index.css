@@ -4,8 +4,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 .navigation {
   position: fixed;
@@ -350,4 +348,44 @@ html {
 .logo-item img:hover {
   filter: grayscale(0);
   transform: scale(1.1);
+}
+
+.slideshow-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.swiper {
+  margin: 0;
+  width: 80%;
+  margin: 0 !important;
+}
+
+.swiper-wrapper {
+  cursor: default !important;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  height: 400px !important;
+  width: auto !important;
+  aspect-ratio: 16/9;
+}
+
+.swiper-slide video {
+  display: block;
+  height: 100%;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 2.5rem;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
 }
