@@ -65,8 +65,6 @@
             id="name"
             name="name"
             placeholder="Nhập tên của bạn"
-            spellcheck="false"
-            autocomplete="off"
             required
           />
         </div>
@@ -79,8 +77,6 @@
             name="phone"
             placeholder="Nhập số điện thoại"
             pattern="[0-9]{10,11}"
-            spellcheck="false"
-            autocomplete="off"
             required
           />
         </div>
@@ -91,8 +87,6 @@
             type="email"
             id="email"
             name="email"
-            spellcheck="false"
-            autocomplete="off"
             placeholder="Nhập địa chỉ email"
             required
           />
@@ -105,11 +99,9 @@
             name="message"
             rows="5"
             placeholder="Nhập lời nhắn của bạn"
-            spellcheck="false"
-            autocomplete="off"
             required></textarea>
         </div>
-        <br />
+        <!-- <br /> -->
         <button class="form-button" type="submit">Gửi</button>
       </form>
     </div>
@@ -119,27 +111,29 @@
 <!-- Phần bản quyền -->
 <div class="rights">
   <p>© 2024 YG. All rights reserved.</p>
-  <img src="logo.png" alt="Logo YG" />
+  <img src="src/media/icon/timthumb.png" alt="thong-bao-cong-thuong" />
 </div>
 
 <style>
   .contact {
     display: flex;
-    gap: 10em;
-    width: 70%;
-    margin-top: 7em;
+    gap: 6em;
+    width: 75%;
+    margin-top: 2em;
+    box-sizing: border-box;
+    margin-left: 12%;
   }
-  .inf {
+  /* .inf {
     flex: 2;
-  }
+  } */
   .contact .inf,
   .contact .contact-form {
     display: inline-grid;
     text-align: left;
   }
-  .contact-form {
+  /* .contact-form {
     flex: 1;
-  }
+  } */
   .contact-form,
   .inf {
     font-weight: 300;
@@ -147,6 +141,13 @@
   .item-contact {
     display: flex;
     gap: 1em;
+    margin-bottom: -6px;
+  }
+  .item-contact span {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 0;
   }
   .item-contact i {
     width: 10%;
@@ -156,28 +157,27 @@
     font-size: 4em;
     color: #fa8500;
   }
-  .include-contact-form {
-    padding: 2em;
-    margin-bottom: 1em;
-  }
+
   .include-contact-form h2 {
-    font-weight: 300;
+    font-weight: 500;
+    padding: 1em;
   }
   .contact .inf {
-    max-width: 50%; /* Hạn chế độ rộng tối đa */
+    max-width: 50%;
   }
   a {
-    text-decoration: none; /* Loại bỏ gạch dưới */
+    text-decoration: none;
   }
   .contact-form {
     background-color: white;
     color: black;
     border-radius: 7px;
+    width: 30%;
   }
 
   .div-class {
-    border-bottom: 2px solid #fa8500;
-    padding-bottom: 10px;
+    border-bottom: 1px solid #fa8500;
+    height: 0;
   }
 
   .contact-form form {
@@ -185,11 +185,19 @@
     flex-direction: column;
   }
 
-  .social-icons a {
-    margin-right: 10px;
+  .social-icons {
+    align-items: center;
+    display: flex;
+    gap: 1em;
+  }
+  .social-icons strong {
+    margin-right: 2em;
+    margin-left: 1em;
   }
   .rights {
-    margin-top: 4em;
+    height: 1em;
+    margin-top: 1.5em;
+    color: darkgray;
   }
   .hotline span,
   .email span,
@@ -204,7 +212,7 @@
   .fa-phone,
   .fa-envelope,
   .fa-map-marker-alt {
-    display: inline-block; /* Để có thể áp dụng width và height */
+    display: inline-block;
     width: 40px;
     height: 40px;
     font-size: 24px;
@@ -227,6 +235,11 @@
     font-size: 16px;
     margin-top: 9px;
     width: 100%;
+    text-decoration: none;
+  }
+  .contain-input {
+    width: 90%;
+    margin-left: 5%;
   }
 
   .contain-input input::placeholder {
@@ -254,6 +267,7 @@
     min-height: 34.5px;
     box-sizing: border-box;
     margin-top: 9px;
+    text-decoration: none;
   }
 
   #message::placeholder {
@@ -264,11 +278,11 @@
   #message:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(255, 133, 0, 0.8);
+    text-decoration: none;
   }
-  .include-contact-form h2 {
-    margin-bottom: 1em;
-  }
+
   .form-button {
+    padding: 1em;
     width: 10%;
     text-decoration: underline;
     text-decoration-color: #ff8500;
@@ -283,5 +297,9 @@
   .contain-input input:-webkit-autofill {
     -webkit-text-fill-color: white !important;
     transition: background-color 5000s ease-in-out 0s;
+  }
+  .rights img {
+    height: 8em;
+    margin-top: -2em;
   }
 </style>
