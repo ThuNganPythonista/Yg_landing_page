@@ -65,6 +65,8 @@
             id="name"
             name="name"
             placeholder="Nhập tên của bạn"
+            spellcheck="false"
+            autocomplete="off"
             required
           />
         </div>
@@ -77,6 +79,8 @@
             name="phone"
             placeholder="Nhập số điện thoại"
             pattern="[0-9]{10,11}"
+            spellcheck="false"
+            autocomplete="off"
             required
           />
         </div>
@@ -87,6 +91,8 @@
             type="email"
             id="email"
             name="email"
+            spellcheck="false"
+            autocomplete="off"
             placeholder="Nhập địa chỉ email"
             required
           />
@@ -99,6 +105,8 @@
             name="message"
             rows="5"
             placeholder="Nhập lời nhắn của bạn"
+            spellcheck="false"
+            autocomplete="off"
             required></textarea>
         </div>
         <br />
@@ -132,6 +140,10 @@
   .contact-form {
     flex: 1;
   }
+  .contact-form,
+  .inf {
+    font-weight: 300;
+  }
   .item-contact {
     display: flex;
     gap: 1em;
@@ -147,6 +159,9 @@
   .include-contact-form {
     padding: 2em;
     margin-bottom: 1em;
+  }
+  .include-contact-form h2 {
+    font-weight: 300;
   }
   .contact .inf {
     max-width: 50%; /* Hạn chế độ rộng tối đa */
@@ -207,9 +222,11 @@
     color: white;
     border: none;
     outline: none;
-    padding: 10px;
+    padding: 8px;
     border-radius: 5px;
     font-size: 16px;
+    margin-top: 9px;
+    width: 100%;
   }
 
   .contain-input input::placeholder {
@@ -220,21 +237,23 @@
   .contain-input input:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(255, 133, 0, 0.8);
+    text-decoration: none;
   }
 
   #message {
-    height: 1em;
+    height: 13px;
     background-color: #ff8500;
     color: white;
     border: none;
-    outline: none;
-    padding: 10px;
+    outline: non;
+    padding: 8px;
     border-radius: 5px;
     font-size: 12px;
     resize: vertical;
-    width: 84%;
-    min-height: 40px;
+    width: 100%;
+    min-height: 34.5px;
     box-sizing: border-box;
+    margin-top: 9px;
   }
 
   #message::placeholder {
@@ -250,6 +269,7 @@
     margin-bottom: 1em;
   }
   .form-button {
+    width: 10%;
     text-decoration: underline;
     text-decoration-color: #ff8500;
     text-decoration-thickness: 2px;
@@ -258,5 +278,10 @@
     border: none;
     color: black;
     cursor: pointer;
+  }
+
+  .contain-input input:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
   }
 </style>

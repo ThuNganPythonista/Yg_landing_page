@@ -66,4 +66,3 @@ document.getElementById('language-toggle').addEventListener('click', function ()
     anchor.textContent = translationMap[newLanguage][href];
   });
 });
-
