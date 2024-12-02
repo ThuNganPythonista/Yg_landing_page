@@ -131,5 +131,19 @@ document.querySelectorAll('.slide4-container .slide4-description p').forEach(ele
 
 document.querySelector('.slide4-container .commitment p').innerHTML = translationMap[newLanguage]['.slide4-container .commitment p'];
 
+
+document.querySelectorAll('.slide4-container .box').forEach((box, index) => {
+  const description = box.querySelector('.box-description');
+  
+  // Tạo khóa dịch cho mỗi phần tử .box-description
+  const translationKey = `.slide4-container .box-container .box:nth-of-type(${index + 1}) .box-description`;
+
+  // Kiểm tra và dịch phần tử .box-description nếu có khóa trong translationMap
+  if (translationMap[newLanguage] && translationMap[newLanguage][translationKey]) {
+    description.innerHTML = translationMap[newLanguage][translationKey];
+  }
+});
+
+
 });
 
