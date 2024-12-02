@@ -1,15 +1,4 @@
-  const navigation = document.getElementById('navigation');
-  const container = document.querySelector('.container');
 
-  container.addEventListener('scroll', () => {
-    const scrollTop = container.scrollTop;
-
-    if (scrollTop > window.innerHeight / 2) {
-      navigation.classList.remove('hidden');
-    } else {
-      navigation.classList.add('hidden');
-    }
-  });
 // tạo sự kiện khi click vào các liên kết điều hướng
 document.querySelectorAll('.navigation a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -22,7 +11,7 @@ document.querySelectorAll('.navigation a').forEach(anchor => {
         });
     });
 });
-document.querySelectorAll('.list-item a').forEach(anchor => {
+document.querySelectorAll('.list-item a, .title').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
       e.preventDefault(); // Ngừng hành động mặc định của thẻ a
 
@@ -66,3 +55,4 @@ document.getElementById('language-toggle').addEventListener('click', function ()
     anchor.textContent = translationMap[newLanguage][href];
   });
 });
+
