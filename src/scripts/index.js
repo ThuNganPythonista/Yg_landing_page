@@ -56,7 +56,23 @@ document.getElementById('language-toggle').addEventListener('click', function ()
     '.slide4-container .box-container .box:nth-of-type(4) .box-description': 'Tư vấn thiết kế',
     '.slide4-container .commitment p': 'Chúng tôi cam kết mang đến những giải pháp hiệu quả,<br />sáng tạo khác biệt dựa trên tinh thần hợp tác, trách nhiệm và giá trị cảm xúc.',
     '.slide6-title' : 'Khách hàng',
-    '.slide6-description': 'Chúng tôi tự hào đồng hành cùng các đối tác hàng đầu trong nhiều lĩnh vực::<br /><strong>FMCG, Food & Beverages, Giáo dục, Dược & Mỹ Phẩm, Bất Động Sản, Điện Tử, Tiêu Dùng, Ô tô, Tài Chính...</strong>'
+    '.slide6-description': 'Chúng tôi tự hào đồng hành cùng các đối tác hàng đầu trong nhiều lĩnh vực::<br /><strong>FMCG, Food & Beverages, Giáo dục, Dược & Mỹ Phẩm, Bất Động Sản, Điện Tử, Tiêu Dùng, Ô tô, Tài Chính...</strong>',
+    '.inf h1': 'Liên hệ',
+    '.item-contact:nth-of-type(5) span': 'Địa chỉ<br /><strong>288/10 Nguyễn Văn Đậu, Bình Thạnh, TP. Hồ Chí Minh</strong>',
+    '.social-icons strong': 'Theo dõi chúng tôi', 
+   '.contact-form h2': 'Thông tin liên hệ',
+    '.contain-input label[for="name"]': 'Tên',
+    '.contain-input input#name': 'Nhập tên của bạn',
+    '.contain-input label[for="phone"]': 'Điện thoại',
+    '.contain-input input#phone': 'Nhập số điện thoại',
+    '.contain-input label[for="email"]': 'Email',
+    '.contain-input input#email': 'Nhập địa chỉ email',
+    '.contain-input label[for="message"]': 'Lời nhắn',
+    '.contain-input textarea#message': 'Nhập lời nhắn của bạn',
+    '.form-button': 'Gửi'
+
+
+    
   },
   en: {
     "#slide2": "Home",
@@ -84,7 +100,20 @@ document.getElementById('language-toggle').addEventListener('click', function ()
     '.slide4-container .commitment p': 'We are committed to providing effective, creative, and unique solutions based on cooperation, responsibility, and emotional value.',
     '.slide6-title' : 'Clients',
     '.slide6-description':'We are proud to collaborate with top partners in various fields:<br /><strong>FMCG, Food & Beverages, Education, Pharmaceuticals & Cosmetics, Real Estate, Consumer Electronics, Automotive, Finance...</strong>',
-  
+    '.inf h1': 'Contact',
+    '.item-contact:nth-of-type(5) span': 'Address<br /><strong>288/10 Nguyen Van Đau, Binh Thanh, TP. Ho Chi Minh</strong>',
+    '.social-icons strong': 'Follow us', 
+        '.contact-form h2': 'Contact Information',
+    '.contain-input label[for="name"]': 'Name',
+    '.contain-input input#name': 'Enter your name',
+    '.contain-input label[for="phone"]': 'Phone',
+    '.contain-input input#phone': 'Enter your phone number',
+    '.contain-input label[for="email"]': 'Email',
+    '.contain-input input#email': 'Enter your email address',
+    '.contain-input label[for="message"]': 'Message',
+    '.contain-input textarea#message': 'Enter your message',
+    '.form-button': 'Submit'
+
   }
 };
 
@@ -154,7 +183,16 @@ document.querySelectorAll('.slide6-title').forEach(element=>{
 document.querySelectorAll('.slide6-description').forEach(element => {
   element.innerHTML = translationMap[newLanguage]['.slide6-description'];
 });
+document.querySelectorAll('.inf h1').forEach(element=>{
+  element.textContent = translationMap[newLanguage]['.inf h1'];
+});
 
+document.querySelectorAll('.item-contact:nth-of-type(5) span').forEach(element => {
+  element.innerHTML = translationMap[newLanguage]['.item-contact:nth-of-type(5) span'];
+});
 
+document.querySelectorAll('.social-icons strong').forEach(element => {
+  element.textContent = translationMap[newLanguage]['.social-icons strong']; 
+});
 });
 

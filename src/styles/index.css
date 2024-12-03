@@ -467,15 +467,14 @@ a {
 .social-icons {
   align-items: center;
   display: flex;
-  gap: 1em;
+  gap: 2.5em;
 }
 .social-icons i {
   width: 40%;
   height: 40%;
 }
 .social-icons strong {
-  margin-right: 2em;
-  margin-left: 1em;
+  width: 9em;
 }
 .rights {
   height: 1em;
@@ -599,4 +598,10 @@ a {
 .fade-in-section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.social-icons a i,
+.social-icons a img {
+  font-size: 24px; /* Giữ kích thước biểu tượng không thay đổi */
+  width: 40px; /* Cố định chiều rộng cho icon */
 }
