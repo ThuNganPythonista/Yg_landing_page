@@ -1,10 +1,8 @@
 
-// tạo sự kiện khi click vào các liên kết điều hướng
 document.querySelectorAll('.navigation a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault(); // Ngừng hành động mặc định của thẻ a
+        e.preventDefault(); 
 
-        // Cuộn mượt mà đến phần tử mục tiêu
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth',
             block: 'start'
@@ -13,9 +11,8 @@ document.querySelectorAll('.navigation a').forEach(anchor => {
 });
 document.querySelectorAll('.list-item a, .title').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-      e.preventDefault(); // Ngừng hành động mặc định của thẻ a
+      e.preventDefault();
 
-      // Cuộn mượt mà đến phần tử mục tiêu
       document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth',
           block: 'start'
@@ -26,10 +23,8 @@ document.getElementById('language-toggle').addEventListener('click', function ()
   const currentLanguage = this.getAttribute('data-language') || 'vi';
   const newLanguage = currentLanguage === 'vi' ? 'en' : 'vi';
 
-  // Cập nhật thuộc tính để lưu trạng thái
   this.setAttribute('data-language', newLanguage);
 
-  // Định nghĩa các bản dịch
   const translationMap = {
   vi: {
     "#slide2": "Trang chủ",
@@ -168,10 +163,8 @@ document.querySelector('.slide4-container .commitment p').innerHTML = translatio
 document.querySelectorAll('.slide4-container .box').forEach((box, index) => {
   const description = box.querySelector('.box-description');
   
-  // Tạo khóa dịch cho mỗi phần tử .box-description
   const translationKey = `.slide4-container .box-container .box:nth-of-type(${index + 1}) .box-description`;
 
-  // Kiểm tra và dịch phần tử .box-description nếu có khóa trong translationMap
   if (translationMap[newLanguage] && translationMap[newLanguage][translationKey]) {
     description.innerHTML = translationMap[newLanguage][translationKey];
   }
@@ -194,5 +187,45 @@ document.querySelectorAll('.item-contact:nth-of-type(5) span').forEach(element =
 document.querySelectorAll('.social-icons strong').forEach(element => {
   element.textContent = translationMap[newLanguage]['.social-icons strong']; 
 });
+
+  document.querySelectorAll('.contact-form h2').forEach(element => {
+    element.textContent = translationMap[newLanguage]['.contact-form h2'];
+  });
+
+   document.querySelectorAll('.contain-input label[for="name"]').forEach(element => {
+    element.textContent = translationMap[newLanguage]['.contain-input label[for="name"]'];
+  });
+
+  document.querySelectorAll('.contain-input input#name').forEach(element => {
+    element.setAttribute('placeholder', translationMap[newLanguage]['.contain-input input#name']);
+  });
+
+  document.querySelectorAll('.contain-input label[for="phone"]').forEach(element => {
+    element.textContent = translationMap[newLanguage]['.contain-input label[for="phone"]'];
+  });
+
+  document.querySelectorAll('.contain-input input#phone').forEach(element => {
+    element.setAttribute('placeholder', translationMap[newLanguage]['.contain-input input#phone']);
+  });
+
+  document.querySelectorAll('.contain-input label[for="email"]').forEach(element => {
+    element.textContent = translationMap[newLanguage]['.contain-input label[for="email"]'];
+  });
+
+  document.querySelectorAll('.contain-input input#email').forEach(element => {
+    element.setAttribute('placeholder', translationMap[newLanguage]['.contain-input input#email']);
+  });
+
+  document.querySelectorAll('.contain-input label[for="message"]').forEach(element => {
+    element.textContent = translationMap[newLanguage]['.contain-input label[for="message"]'];
+  });
+
+  document.querySelectorAll('.contain-input textarea#message').forEach(element => {
+    element.setAttribute('placeholder', translationMap[newLanguage]['.contain-input textarea#message']);
+  });
+
+  document.querySelectorAll('.form-button').forEach(element => {
+    element.textContent = translationMap[newLanguage]['.form-button'];
+  });
 });
 

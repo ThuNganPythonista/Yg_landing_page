@@ -1,0 +1,19 @@
+@media screen and (min-width: 1800px) {
+  .title {
+    margin-right: 39em;
+  }
+  .navigation a,
+  .list-item a {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 1600px) and (max-width: 1799px) {
+}
+@media screen and (min-width: 1440px) and (max-width: 1599px) {
+}
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
