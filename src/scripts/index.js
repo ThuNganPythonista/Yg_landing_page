@@ -54,7 +54,9 @@ document.getElementById('language-toggle').addEventListener('click', function ()
     '.slide4-container .box-container .box:nth-of-type(2) .box-description': 'Tổ chức sự kiện',
     '.slide4-container .box-container .box:nth-of-type(3) .box-description': 'Hoạt động kích hoạt<br />thương mại',
     '.slide4-container .box-container .box:nth-of-type(4) .box-description': 'Tư vấn thiết kế',
-    '.slide4-container .commitment p': 'Chúng tôi cam kết mang đến những giải pháp hiệu quả,<br />sáng tạo khác biệt dựa trên tinh thần hợp tác, trách nhiệm và giá trị cảm xúc.'
+    '.slide4-container .commitment p': 'Chúng tôi cam kết mang đến những giải pháp hiệu quả,<br />sáng tạo khác biệt dựa trên tinh thần hợp tác, trách nhiệm và giá trị cảm xúc.',
+    '.slide6-title' : 'Khách hàng',
+    '.slide6-description': 'Chúng tôi tự hào đồng hành cùng các đối tác hàng đầu trong nhiều lĩnh vực::<br /><strong>FMCG, Food & Beverages, Giáo dục, Dược & Mỹ Phẩm, Bất Động Sản, Điện Tử, Tiêu Dùng, Ô tô, Tài Chính...</strong>'
   },
   en: {
     "#slide2": "Home",
@@ -79,7 +81,9 @@ document.getElementById('language-toggle').addEventListener('click', function ()
     '.slide4-container .box-container .box:nth-of-type(2) .box-description': 'Event organization',
     '.slide4-container .box-container .box:nth-of-type(3) .box-description': 'Commercial activation activities',
     '.slide4-container .box-container .box:nth-of-type(4) .box-description': 'Design consultancy',
-    '.slide4-container .commitment p': 'We are committed to providing effective, creative, and unique solutions based on cooperation, responsibility, and emotional value.'
+    '.slide4-container .commitment p': 'We are committed to providing effective, creative, and unique solutions based on cooperation, responsibility, and emotional value.',
+    '.slide6-title' : 'Clients',
+    '.slide6-description':'We are proud to collaborate with top partners in various fields:<br /><strong>FMCG, Food & Beverages, Education, Pharmaceuticals & Cosmetics, Real Estate, Consumer Electronics, Automotive, Finance...</strong>',
   
   }
 };
@@ -142,6 +146,13 @@ document.querySelectorAll('.slide4-container .box').forEach((box, index) => {
   if (translationMap[newLanguage] && translationMap[newLanguage][translationKey]) {
     description.innerHTML = translationMap[newLanguage][translationKey];
   }
+});
+
+document.querySelectorAll('.slide6-title').forEach(element=>{
+  element.textContent = translationMap[newLanguage]['.slide6-title'];
+});
+document.querySelectorAll('.slide6-description').forEach(element => {
+  element.innerHTML = translationMap[newLanguage]['.slide6-description'];
 });
 
 
