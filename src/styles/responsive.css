@@ -71,7 +71,7 @@
     font-size: 6.5rem;
   }
   .slide6-description {
-    font-size: xx-large;
+    font-size: x-large;
   }
   .logo-grid {
     display: grid;
@@ -92,6 +92,34 @@
   }
   .slideshow-container {
     margin-bottom: 8em;
+  }
+  .contact {
+    gap: 9em;
+    width: 81%;
+    font-size: 177%;
+    margin-left: 2%;
+    margin-bottom: 5em;
+    margin-top: 11em;
+  }
+  .include-contact-form h2 {
+    padding: 0;
+    margin-bottom: 30px;
+    margin-left: 9px;
+  }
+  .contact-form {
+    padding: 1em;
+  }
+
+  .form-button {
+    font-size: smaller;
+    padding: 1em;
+  }
+  .contain-input input {
+    padding: 16px;
+  }
+  #message {
+    padding: 16px;
+    min-height: 47.5px;
   }
 }
 @media screen and (min-width: 1600px) and (max-width: 1799px) {
