@@ -64,7 +64,8 @@ document.getElementById('language-toggle').addEventListener('click', function ()
     '.contain-input input#email': 'Nhập địa chỉ email',
     '.contain-input label[for="message"]': 'Lời nhắn',
     '.contain-input textarea#message': 'Nhập lời nhắn của bạn',
-    '.form-button': 'Gửi'
+    '.form-button': 'Gửi',
+    '.slide-project': 'Dự án',
 
 
     
@@ -107,7 +108,8 @@ document.getElementById('language-toggle').addEventListener('click', function ()
     '.contain-input input#email': 'Enter your email address',
     '.contain-input label[for="message"]': 'Message',
     '.contain-input textarea#message': 'Enter your message',
-    '.form-button': 'Submit'
+    '.form-button': 'Submit',
+    '.slide-project': 'Projects'
 
   }
 };
@@ -218,6 +220,10 @@ document.querySelectorAll('.social-icons strong').forEach(element => {
 
   document.querySelectorAll('.contain-input label[for="message"]').forEach(element => {
     element.textContent = translationMap[newLanguage]['.contain-input label[for="message"]'];
+  });
+
+document.querySelectorAll('.slide-project').forEach(element => {
+    element.textContent = translationMap[newLanguage]['.slide-project'];
   });
 
   document.querySelectorAll('.contain-input textarea#message').forEach(element => {

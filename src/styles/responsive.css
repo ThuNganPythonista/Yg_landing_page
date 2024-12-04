@@ -6,6 +6,93 @@
   .list-item a {
     font-size: 1.3rem;
   }
+  .yg-team {
+    margin-left: 10em;
+  }
+  .yg-team .big-sign {
+    font-size: 18rem;
+  }
+  .yg-team p {
+    font-size: x-large;
+  }
+  .yg-team h1 {
+    font-size: 5.5rem;
+  }
+  .title-text {
+    font-size: xxx-large;
+  }
+  .slide4-description p,
+  .slide4-description,
+  .commitment p,
+  .description-team p {
+    font-size: x-large;
+  }
+  .slide4-container {
+    width: 100%;
+  }
+  .box-container {
+    width: 100%;
+  }
+  .box {
+    width: 23em;
+    padding: 3.9em;
+  }
+  .container-slide3 {
+    margin-top: 1em;
+  }
+  .slide4-container {
+    gap: 5rem;
+  }
+}
+
+/* Khi màn hình có tỷ lệ 4:3 */
+@media screen and (min-width: 1800px) and (min-height: 1200px) {
+  #slide1 video {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Cắt video để khớp vùng hiển thị */
+    aspect-ratio: 4 / 3; /* Thay đổi tỷ lệ thành 4:3 */
+  }
+  .navigation a,
+  .list-item a {
+    font-size: 1.5rem;
+  }
+  .slide4-container {
+    gap: 8rem;
+    margin-top: 5em;
+  }
+  .slide-project {
+    margin-top: -1em;
+    padding: 0.5em;
+    color: #fa8500;
+    font-size: 7em;
+  }
+  .slide6-title {
+    font-size: 6.5rem;
+  }
+  .slide6-description {
+    font-size: xx-large;
+  }
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10em;
+    width: 100%;
+    max-width: 97em;
+    justify-items: center;
+  }
+  .slide6-content {
+    margin-top: -4em;
+  }
+  .slide6-description {
+    margin-bottom: 129px;
+  }
+  .slide-span-project {
+    font-size: xx-large;
+  }
+  .slideshow-container {
+    margin-bottom: 8em;
+  }
 }
 @media screen and (min-width: 1600px) and (max-width: 1799px) {
 }

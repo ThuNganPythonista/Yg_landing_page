@@ -605,3 +605,13 @@ a {
   font-size: 24px; /* Giữ kích thước biểu tượng không thay đổi */
   width: 40px; /* Cố định chiều rộng cho icon */
 }
+
+.slide-project {
+  margin-top: -1em;
+  padding: 0.5em;
+  color: #fa8500;
+}
+
+.slide-span-project {
+  margin-top: 2em;
+}
