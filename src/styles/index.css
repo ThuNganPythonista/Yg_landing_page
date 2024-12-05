@@ -96,11 +96,14 @@ html {
   width: 80%;
   margin-top: 5%;
 }
-
 .title {
   font-size: 2rem;
   font-weight: bold;
-  margin-right: 26em;
+  margin-right: 28em;
+  width: 26em;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .highlight {
@@ -384,6 +387,13 @@ html {
 .swiper-slide video {
   display: block;
   height: 100%;
+}
+#slide1 video {
+  max-height: 100%;
+  width: 100%;
+  max-width: 5000px;
+  height: auto;
+  object-fit: cover;
 }
 
 .fa-chevron-left,
