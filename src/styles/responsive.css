@@ -167,6 +167,9 @@
   #slide1 video {
     aspect-ratio: 4/3; /* Thay đổi tỷ lệ thành 4:3 */
   }
+  .inf h1 {
+    font-size: 4em;
+  }
   .navigation a,
   .list-item a {
     font-size: 1.5rem;
@@ -207,18 +210,10 @@
   .slideshow-container {
     margin-bottom: 8em;
   }
-  .contact {
-    gap: 9em;
-    width: 81%;
-    font-size: 177%;
-    margin-left: 2%;
-    margin-bottom: 5em;
-    margin-top: 11em;
-  }
+
   .include-contact-form h2 {
     padding: 0;
     margin-bottom: 30px;
-    margin-left: 9px;
   }
   .contact-form {
     padding: 1em;
@@ -226,19 +221,31 @@
 
   .form-button {
     font-size: smaller;
-    padding: 1em;
   }
   .contain-input input {
     padding: 16px;
   }
   #message {
     padding: 16px;
-    min-height: 47.5px;
+    min-height: 60.5px;
+    font-size: 24px;
+  }
+  .contact {
+    gap: 9em;
+    width: 95%;
+    font-size: 177%;
+    margin-left: 2%;
+    margin-bottom: 3em;
+    margin-top: 5em;
   }
 }
-@media screen and (max-width: 1635px) and (max-height: 877px) {
+@media screen and (max-width: 1800px) and (max-height: 1200px) {
   #slide1 video {
-    aspect-ratio: 4/3; /* Thay đổi tỷ lệ thành 4:3 */
+    max-height: 100%;
+    width: 100%;
+    max-width: 5000px;
+    height: auto;
+    object-fit: cover;
   }
 }
 @media screen and (min-width: 1600px) and (max-width: 1799px) {

@@ -388,13 +388,13 @@ html {
   display: block;
   height: 100%;
 }
-#slide1 video {
+/* #slide1 video {
   max-height: 100%;
   width: 100%;
   max-width: 5000px;
   height: auto;
   object-fit: cover;
-}
+} */
 
 .fa-chevron-left,
 .fa-chevron-right {
