@@ -85,7 +85,8 @@ html {
   align-items: center;
   color: white;
   text-align: center;
-  /* padding: 2rem; */
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 #slide1 {
   margin-bottom: -1em;
@@ -99,7 +100,7 @@ html {
 .title {
   font-size: 2rem;
   font-weight: bold;
-  margin-right: 28em;
+  margin-right: 100%;
   width: 26em;
   text-align: center;
   overflow: hidden;
@@ -388,13 +389,6 @@ html {
   display: block;
   height: 100%;
 }
-/* #slide1 video {
-  max-height: 100%;
-  width: 100%;
-  max-width: 5000px;
-  height: auto;
-  object-fit: cover;
-} */
 
 .fa-chevron-left,
 .fa-chevron-right {
