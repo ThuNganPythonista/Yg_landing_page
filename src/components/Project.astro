@@ -30,14 +30,14 @@
     if (e.matches) {
       // Khi màn hình nhỏ hơn 1390px, đổi video
       videoElements.forEach((video) => {
-        video.src = "/src/media/logo-fix-sqr.mp4"; // Đổi đường dẫn video nhỏ hơn
-        video.parentElement.load(); // Tải lại video
+        video.src = "/src/media/logo-fix-sqr.mp4";
+        video.parentElement.load();
       });
     } else {
       // Khi màn hình lớn hơn 1390px, đổi lại video gốc
       videoElements.forEach((video) => {
-        video.src = "/src/media/logo fix 5.mp4"; // Đổi lại đường dẫn video gốc
-        video.parentElement.load(); // Tải lại video
+        video.src = "/src/media/logo fix 5.mp4";
+        video.parentElement.load();
       });
     }
   }

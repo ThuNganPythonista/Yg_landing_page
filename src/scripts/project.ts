@@ -11,7 +11,13 @@ const slideHtml = `
       </video>
     </div>
   `;
-
+const slideHtmlSmaller = `
+    <div class="swiper-slide">
+      <video loop>
+        <source src="/src/media/logo-fix-sqr.mp4" />
+      </video>
+    </div>
+  `;
 const swiper = new Swiper(".mySwiper", {
   allowTouchMove: false,
   initialSlide: 4,
@@ -117,28 +123,30 @@ swiper.on("slidePrevTransitionEnd", () => {
 swiper.on("slideNextTransitionEnd", () => {
   swiper.removeSlide(0);
 });
+
+
 const mediaQuery = window.matchMedia("(min-width: 1390px)");
 
 leftArrow?.addEventListener("click", async () => {
   if (mediaQuery.matches) {
-    // Khi màn hình lớn hơn 1390px
+    // Khi màn hình lớn hơn 1390px, thêm slideHtml
     swiper.prependSlide(slideHtml);
-    await new Promise((resolve) => setTimeout(resolve, 10));
-    swiper.slidePrev();
   } else {
-    // Khi màn hình nhỏ hơn hoặc bằng 1390px
-    swiper.slideNext();
+    // Khi màn hình nhỏ hơn hoặc bằng 1390px, thêm slideHtmlSmaller
+    swiper.prependSlide(slideHtmlSmaller);
   }
+  await new Promise((resolve) => setTimeout(resolve, 10));
+  swiper.slidePrev();
 });
 
 rightArrow?.addEventListener("click", async () => {
   if (mediaQuery.matches) {
-    // Khi màn hình lớn hơn 1390px
+    // Khi màn hình lớn hơn 1390px, thêm slideHtml
     swiper.appendSlide(slideHtml);
-    await new Promise((resolve) => setTimeout(resolve, 10));
-    swiper.slideNext();
   } else {
-    // Khi màn hình nhỏ hơn hoặc bằng 1390px
-    swiper.slideNext();
+    // Khi màn hình nhỏ hơn hoặc bằng 1390px, thêm slideHtmlSmaller
+    swiper.appendSlide(slideHtmlSmaller);
   }
+  await new Promise((resolve) => setTimeout(resolve, 10));
+  swiper.slideNext();
 });
