@@ -20,38 +20,25 @@
 </div>
 <span class="slide-span-project">Tell me something you would like to talk</span>
 
-<!-- <script src="/src/scripts/project.ts" id="conditional-script"></script> -->
-
+<script src="/src/scripts/project.ts"></script>
 <script id="conditional-script">
   const mediaQuery = window.matchMedia("(max-width: 1390px)");
 
   function handleScreenSizeChange(e) {
-    const elementsToHide = [
-      document.querySelector(".slide-project"),
-      document.querySelector(".slideshow-container"),
-      document.querySelector(".slide-span-project"),
-    ];
-    const scriptElement = document.getElementById("conditional-script");
+    const videoElements = document.querySelectorAll(".slideshow-vid source");
 
     if (e.matches) {
-      // Khi màn hình nhỏ hơn 1390px, ẩn HTML và xóa script
-      elementsToHide.forEach((el) => {
-        if (el) el.style.display = "none";
+      // Khi màn hình nhỏ hơn 1390px, đổi video
+      videoElements.forEach((video) => {
+        video.src = "/src/media/logo-fix-sqr.mp4"; // Đổi đường dẫn video nhỏ hơn
+        video.parentElement.load(); // Tải lại video
       });
-      if (scriptElement) scriptElement.remove();
     } else {
-      // Khi màn hình lớn hơn 1390px, hiển thị lại HTML
-      elementsToHide.forEach((el) => {
-        if (el) el.style.display = "";
+      // Khi màn hình lớn hơn 1390px, đổi lại video gốc
+      videoElements.forEach((video) => {
+        video.src = "/src/media/logo fix 5.mp4"; // Đổi lại đường dẫn video gốc
+        video.parentElement.load(); // Tải lại video
       });
-      if (!scriptElement) {
-        const newScript = document.createElement("script");
-        newScript.src = "/src/scripts/project.ts";
-        newScript.id = "conditional-script";
-        newScript.type = "module";
-        newScript.defer = true;
-        document.body.appendChild(newScript);
-      }
     }
   }
 

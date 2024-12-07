@@ -11,6 +11,7 @@ const slideHtml = `
       </video>
     </div>
   `;
+
 const swiper = new Swiper(".mySwiper", {
   allowTouchMove: false,
   initialSlide: 4,
@@ -25,10 +26,25 @@ const swiper = new Swiper(".mySwiper", {
     depth: 400,
     modifier: 1,
     slideShadows: true,
-  },   
-   breakpoints: {
-
-        1390: {
+  },
+  breakpoints: {
+    1800: {
+      allowTouchMove: false,
+      initialSlide: 4,
+      slidesPerView: "auto",
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      spaceBetween: -400,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 400,
+        modifier: 1,
+        slideShadows: true,
+      },
+    },
+    1390: {
       allowTouchMove: false,
       initialSlide: 2,
       slidesPerView: "auto",
@@ -44,7 +60,23 @@ const swiper = new Swiper(".mySwiper", {
         slideShadows: true,
       },
     },
-}
+    1000: {
+      allowTouchMove: false,
+      initialSlide: 2,
+      slidesPerView: "auto",
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      spaceBetween: -600,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 400,
+        modifier: 1,
+        slideShadows: true,
+      },
+    },
+  },
 });
 
 const observer = new IntersectionObserver((entries) => {
@@ -85,15 +117,28 @@ swiper.on("slidePrevTransitionEnd", () => {
 swiper.on("slideNextTransitionEnd", () => {
   swiper.removeSlide(0);
 });
+const mediaQuery = window.matchMedia("(min-width: 1390px)");
 
 leftArrow?.addEventListener("click", async () => {
-  swiper.prependSlide(slideHtml);
-  await new Promise((resolve) => setTimeout(resolve, 10));
-  swiper.slidePrev();
+  if (mediaQuery.matches) {
+    // Khi màn hình lớn hơn 1390px
+    swiper.prependSlide(slideHtml);
+    await new Promise((resolve) => setTimeout(resolve, 10));
+    swiper.slidePrev();
+  } else {
+    // Khi màn hình nhỏ hơn hoặc bằng 1390px
+    swiper.slideNext();
+  }
 });
 
 rightArrow?.addEventListener("click", async () => {
-  swiper.appendSlide(slideHtml);
-  await new Promise((resolve) => setTimeout(resolve, 10));
-  swiper.slideNext();
+  if (mediaQuery.matches) {
+    // Khi màn hình lớn hơn 1390px
+    swiper.appendSlide(slideHtml);
+    await new Promise((resolve) => setTimeout(resolve, 10));
+    swiper.slideNext();
+  } else {
+    // Khi màn hình nhỏ hơn hoặc bằng 1390px
+    swiper.slideNext();
+  }
 });

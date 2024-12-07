@@ -546,9 +546,10 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 }
 @media screen and (max-width: 1390px) {
-  /* .slide-project,
-  .slideshow-container,
-  .slide-span-project {
-    display: block;
-  } */
+  .fa-chevron-left {
+    margin-right: 3%;
+  }
+  .fa-chevron-right {
+    margin-left: -10%;
+  }
 }
