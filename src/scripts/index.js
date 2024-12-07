@@ -235,3 +235,6 @@ document.querySelectorAll('.slide-project').forEach(element => {
   });
 });
 
+
+
+

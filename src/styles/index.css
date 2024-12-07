@@ -366,6 +366,12 @@ html {
   justify-content: space-around;
   align-items: center;
 }
+/* .slideshow-container2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+} */
 
 .swiper {
   margin: 0;
@@ -615,7 +621,18 @@ a {
   padding: 0.5em;
   color: #fa8500;
 }
+.slide-project2 {
+  margin-top: -1em;
+  padding: 0.5em;
+  color: #fa8500;
+}
 
 .slide-span-project {
   margin-top: 2em;
+}
+.slide-span-project2 {
+  margin-top: 2em;
+}
+.hidden {
+  display: none;
 }

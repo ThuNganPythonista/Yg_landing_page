@@ -13,7 +13,7 @@ const slideHtml = `
   `;
 const swiper = new Swiper(".mySwiper", {
   allowTouchMove: false,
-  initialSlide: 2,
+  initialSlide: 4,
   slidesPerView: "auto",
   effect: "coverflow",
   grabCursor: true,
@@ -25,8 +25,28 @@ const swiper = new Swiper(".mySwiper", {
     depth: 400,
     modifier: 1,
     slideShadows: true,
-  },
+  },   
+   breakpoints: {
+
+        1390: {
+      allowTouchMove: false,
+      initialSlide: 2,
+      slidesPerView: "auto",
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      spaceBetween: -550,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 400,
+        modifier: 1,
+        slideShadows: true,
+      },
+    },
+}
 });
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {

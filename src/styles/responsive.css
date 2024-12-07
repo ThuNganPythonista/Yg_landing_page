@@ -396,12 +396,12 @@
     width: 30%;
   }
   .contact {
-    margin-top: 9em;
     margin-left: 12%;
     gap: 11em;
+    margin-top: 6em;
   }
   .rights {
-    margin-top: 6.5em;
+    margin-top: 4em;
   }
 
   .item-contact span,
@@ -530,6 +530,13 @@
   .include-contact-form h2 {
     margin-left: -0.6em;
   }
+  .description-team {
+    margin-top: 1em;
+  }
+
+  #message {
+    min-height: 36.5px;
+  }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
@@ -537,4 +544,11 @@
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+@media screen and (max-width: 1390px) {
+  /* .slide-project,
+  .slideshow-container,
+  .slide-span-project {
+    display: block;
+  } */
 }

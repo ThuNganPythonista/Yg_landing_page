@@ -1,0 +1,64 @@
+<!-- <h1 class="slide-project" style="display:none">Dự án</h1>
+
+<div class="slideshow-container" style="display:none">
+  <i class="fa-solid fa-chevron-left"></i>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      {
+        //JSX
+        Array.from({ length: 5 }).map(() => (
+          <div class="swiper-slide">
+            <video loop class="slideshow-vid">
+              <source src="/src/media/logo-fix-sqr.mp4" type="video/mp4" />
+            </video>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <i class="fa-solid fa-chevron-right"></i>
+</div>
+<span class="slide-span-project" style="display:none"
+  >Tell me something you would like to talk</span
+>
+
+<script src="/src/scripts/project2.ts"></script>
+<script id="conditional-script">
+  const mediaQuery = window.matchMedia("(min-width: 1390px)");
+
+  function handleScreenSizeChange(e) {
+    const elementsToHide = [
+      document.querySelector(".slide-project"),
+      document.querySelector(".slideshow-container"),
+      document.querySelector(".slide-span-project"),
+    ];
+    const scriptElement = document.getElementById("conditional-script");
+
+    if (e.matches) {
+      // Khi màn hình lớn hơn 1390px, ẩn HTML và xóa script
+      elementsToHide.forEach((el) => {
+        if (el) el.style.display = "none";
+      });
+      if (scriptElement) scriptElement.remove();
+    } else {
+      // Khi màn hình nhỏ hơn 1390px, hiển thị lại HTML
+      elementsToHide.forEach((el) => {
+        if (el) el.style.display = "";
+      });
+      if (!scriptElement) {
+        const newScript = document.createElement("script");
+        newScript.src = "/src/scripts/project2.ts";
+        newScript.id = "conditional-script";
+        newScript.type = "module";
+        newScript.defer = true;
+        document.body.appendChild(newScript);
+      }
+    }
+  }
+
+  // Xử lý ngay khi tải trang
+  handleScreenSizeChange(mediaQuery);
+
+  // Lắng nghe sự kiện thay đổi kích thước màn hình
+  mediaQuery.addEventListener("change", handleScreenSizeChange);
+</script> -->
