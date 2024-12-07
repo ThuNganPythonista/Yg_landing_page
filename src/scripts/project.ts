@@ -150,3 +150,13 @@ rightArrow?.addEventListener("click", async () => {
   await new Promise((resolve) => setTimeout(resolve, 10));
   swiper.slideNext();
 });
+
+
+// Đảm bảo Swiper được cập nhật đúng sau khi thêm hoặc xoá slide
+swiper.on("slideNextTransitionEnd", () => {
+  swiper.update(); // Cập nhật Swiper để đảm bảo nó nhận diện các slide mới
+});
+
+swiper.on("slidePrevTransitionEnd", () => {
+  swiper.update(); // Cập nhật tương tự cho prev
+});

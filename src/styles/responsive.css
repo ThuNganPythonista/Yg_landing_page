@@ -439,6 +439,10 @@
   .contact-form form {
     padding: 1em;
   }
+  #message {
+    min-height: 36.5px;
+    padding: 11px;
+  }
 }
 @media screen and (min-width: 1440px) and (max-width: 1599px) {
   #slide1 video {
@@ -546,10 +550,4 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 }
 @media screen and (max-width: 1390px) {
-  .fa-chevron-left {
-    margin-right: 3%;
-  }
-  .fa-chevron-right {
-    margin-left: -10%;
-  }
 }
