@@ -591,7 +591,7 @@
   }
 }
 
-/* desktop cũ và ipad chế độ ngang  */
+/* ipad ngang  */
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
