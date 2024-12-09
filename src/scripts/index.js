@@ -114,127 +114,201 @@ document.getElementById('language-toggle').addEventListener('click', function ()
   }
 };
 
+//   document.querySelectorAll('nav a').forEach(anchor => {
+//     const href = anchor.getAttribute('href');
+//     anchor.textContent = translationMap[newLanguage][href];
+//   });
+
+
+// document.querySelectorAll('nav a').forEach(anchor => {
+//   const href = anchor.getAttribute('href');
+//   anchor.textContent = translationMap[newLanguage][href] || anchor.textContent;
+// });
+
+// document.querySelectorAll('.about-section .title').forEach(element => {
+//   element.innerHTML = translationMap[newLanguage]['.about-section .title'];
+// });
+
+// document.querySelectorAll('.service-link').forEach(element => {
+//   element.textContent = translationMap[newLanguage]['.service-link'];
+// });
+
+// document.querySelectorAll('.project-link').forEach(element => {
+//   element.textContent = translationMap[newLanguage]['.project-link'];
+// });
+
+// document.querySelectorAll('.customer-link').forEach(element => {
+//   element.textContent = translationMap[newLanguage]['.customer-link'];
+// });
+
+// document.querySelectorAll('.contact-link').forEach(element => {
+//   element.textContent = translationMap[newLanguage]['.contact-link'];
+// });
+
+// document.querySelector('.container-slide3 .yg-team h1').textContent = translationMap[newLanguage]['.container-slide3 .yg-team h1'];
+// document.querySelector('.container-slide3 .yg-team h2').textContent = translationMap[newLanguage]['.container-slide3 .yg-team h2'];
+// document.querySelector('.container-slide3 .yg-team p').innerHTML = translationMap[newLanguage]['.container-slide3 .yg-team p'];
+
+// document.querySelector('.description-team .title-text').textContent = translationMap[newLanguage]['.description-team .title-text'];
+// document.querySelectorAll('.description-team p').forEach((p, index) => {
+//   p.textContent = translationMap[newLanguage][`.description-team p:nth-of-type(${index + 1})`];
+// });
+
+// document.querySelectorAll('.slide4-container .slide4-description p').forEach(element => {
+//   element.innerHTML = translationMap[newLanguage]['.slide4-container .slide4-description p'];
+// });
+
+
+// document.querySelector('.slide4-container .commitment p').innerHTML = translationMap[newLanguage]['.slide4-container .commitment p'];
+
+
+// document.querySelectorAll('.slide4-container .box').forEach((box, index) => {
+//   const description = box.querySelector('.box-description');
+  
+//   const translationKey = `.slide4-container .box-container .box:nth-of-type(${index + 1}) .box-description`;
+
+//   if (translationMap[newLanguage] && translationMap[newLanguage][translationKey]) {
+//     description.innerHTML = translationMap[newLanguage][translationKey];
+//   }
+// });
+
+// document.querySelectorAll('.slide6-title').forEach(element=>{
+//   element.textContent = translationMap[newLanguage]['.slide6-title'];
+// });
+// document.querySelectorAll('.slide6-description').forEach(element => {
+//   element.innerHTML = translationMap[newLanguage]['.slide6-description'];
+// });
+// document.querySelectorAll('.inf h1').forEach(element=>{
+//   element.textContent = translationMap[newLanguage]['.inf h1'];
+// });
+
+// document.querySelectorAll('.item-contact:nth-of-type(5) span').forEach(element => {
+//   element.innerHTML = translationMap[newLanguage]['.item-contact:nth-of-type(5) span'];
+// });
+
+// document.querySelectorAll('.social-icons strong').forEach(element => {
+//   element.textContent = translationMap[newLanguage]['.social-icons strong']; 
+// });
+
+//   document.querySelectorAll('.contact-form h2').forEach(element => {
+//     element.textContent = translationMap[newLanguage]['.contact-form h2'];
+//   });
+
+//    document.querySelectorAll('.contain-input label[for="name"]').forEach(element => {
+//     element.textContent = translationMap[newLanguage]['.contain-input label[for="name"]'];
+//   });
+
+//   document.querySelectorAll('.contain-input input#name').forEach(element => {
+//     element.setAttribute('placeholder', translationMap[newLanguage]['.contain-input input#name']);
+//   });
+
+//   document.querySelectorAll('.contain-input label[for="phone"]').forEach(element => {
+//     element.textContent = translationMap[newLanguage]['.contain-input label[for="phone"]'];
+//   });
+
+//   document.querySelectorAll('.contain-input input#phone').forEach(element => {
+//     element.setAttribute('placeholder', translationMap[newLanguage]['.contain-input input#phone']);
+//   });
+
+//   document.querySelectorAll('.contain-input label[for="email"]').forEach(element => {
+//     element.textContent = translationMap[newLanguage]['.contain-input label[for="email"]'];
+//   });
+
+//   document.querySelectorAll('.contain-input input#email').forEach(element => {
+//     element.setAttribute('placeholder', translationMap[newLanguage]['.contain-input input#email']);
+//   });
+
+//   document.querySelectorAll('.contain-input label[for="message"]').forEach(element => {
+//     element.textContent = translationMap[newLanguage]['.contain-input label[for="message"]'];
+//   });
+
+// document.querySelectorAll('.slide-project').forEach(element => {
+//     element.textContent = translationMap[newLanguage]['.slide-project'];
+//   });
+
+//   document.querySelectorAll('.contain-input textarea#message').forEach(element => {
+//     element.setAttribute('placeholder', translationMap[newLanguage]['.contain-input textarea#message']);
+//   });
+
+//   document.querySelectorAll('.form-button').forEach(element => {
+//     element.textContent = translationMap[newLanguage]['.form-button'];
+//   });
+
+  // Hàm hỗ trợ để thay đổi nội dung của các phần tử
+  const updateTextContent = (selector, translationKey) => {
+    document.querySelectorAll(selector).forEach((element) => {
+      if (translationMap[newLanguage][translationKey]) {
+        element.textContent = translationMap[newLanguage][translationKey];
+      }
+    });
+  };
+
+  const updateInnerHTML = (selector, translationKey) => {
+    document.querySelectorAll(selector).forEach((element) => {
+      if (translationMap[newLanguage][translationKey]) {
+        element.innerHTML = translationMap[newLanguage][translationKey];
+      }
+    });
+  };
+
+  const updatePlaceholder = (selector, translationKey) => {
+    document.querySelectorAll(selector).forEach((element) => {
+      if (translationMap[newLanguage][translationKey]) {
+        element.setAttribute('placeholder', translationMap[newLanguage][translationKey]);
+      }
+    });
+  };
+
+  // Cập nhật văn bản của các liên kết trong điều hướng
   document.querySelectorAll('nav a').forEach(anchor => {
     const href = anchor.getAttribute('href');
-    anchor.textContent = translationMap[newLanguage][href];
+    anchor.textContent = translationMap[newLanguage][href] || anchor.textContent;
   });
 
+  // Áp dụng các thay đổi cụ thể
+  updateInnerHTML('.about-section .title', '.about-section .title');
+  updateTextContent('.service-link', '.service-link');
+  updateTextContent('.project-link', '.project-link');
+  updateTextContent('.customer-link', '.customer-link');
+  updateTextContent('.contact-link', '.contact-link');
+  updateTextContent('.container-slide3 .yg-team h1', '.container-slide3 .yg-team h1');
+  updateTextContent('.container-slide3 .yg-team h2', '.container-slide3 .yg-team h2');
+  updateInnerHTML('.container-slide3 .yg-team p', '.container-slide3 .yg-team p');
+  updateTextContent('.description-team .title-text', '.description-team .title-text');
 
-document.querySelectorAll('nav a').forEach(anchor => {
-  const href = anchor.getAttribute('href');
-  anchor.textContent = translationMap[newLanguage][href] || anchor.textContent;
-});
-
-document.querySelectorAll('.about-section .title').forEach(element => {
-  element.innerHTML = translationMap[newLanguage]['.about-section .title'];
-});
-
-document.querySelectorAll('.service-link').forEach(element => {
-  element.textContent = translationMap[newLanguage]['.service-link'];
-});
-
-document.querySelectorAll('.project-link').forEach(element => {
-  element.textContent = translationMap[newLanguage]['.project-link'];
-});
-
-document.querySelectorAll('.customer-link').forEach(element => {
-  element.textContent = translationMap[newLanguage]['.customer-link'];
-});
-
-document.querySelectorAll('.contact-link').forEach(element => {
-  element.textContent = translationMap[newLanguage]['.contact-link'];
-});
-
-document.querySelector('.container-slide3 .yg-team h1').textContent = translationMap[newLanguage]['.container-slide3 .yg-team h1'];
-document.querySelector('.container-slide3 .yg-team h2').textContent = translationMap[newLanguage]['.container-slide3 .yg-team h2'];
-document.querySelector('.container-slide3 .yg-team p').innerHTML = translationMap[newLanguage]['.container-slide3 .yg-team p'];
-
-document.querySelector('.description-team .title-text').textContent = translationMap[newLanguage]['.description-team .title-text'];
-document.querySelectorAll('.description-team p').forEach((p, index) => {
-  p.textContent = translationMap[newLanguage][`.description-team p:nth-of-type(${index + 1})`];
-});
-
-document.querySelectorAll('.slide4-container .slide4-description p').forEach(element => {
-  element.innerHTML = translationMap[newLanguage]['.slide4-container .slide4-description p'];
-});
-
-
-document.querySelector('.slide4-container .commitment p').innerHTML = translationMap[newLanguage]['.slide4-container .commitment p'];
-
-
-document.querySelectorAll('.slide4-container .box').forEach((box, index) => {
-  const description = box.querySelector('.box-description');
-  
-  const translationKey = `.slide4-container .box-container .box:nth-of-type(${index + 1}) .box-description`;
-
-  if (translationMap[newLanguage] && translationMap[newLanguage][translationKey]) {
-    description.innerHTML = translationMap[newLanguage][translationKey];
-  }
-});
-
-document.querySelectorAll('.slide6-title').forEach(element=>{
-  element.textContent = translationMap[newLanguage]['.slide6-title'];
-});
-document.querySelectorAll('.slide6-description').forEach(element => {
-  element.innerHTML = translationMap[newLanguage]['.slide6-description'];
-});
-document.querySelectorAll('.inf h1').forEach(element=>{
-  element.textContent = translationMap[newLanguage]['.inf h1'];
-});
-
-document.querySelectorAll('.item-contact:nth-of-type(5) span').forEach(element => {
-  element.innerHTML = translationMap[newLanguage]['.item-contact:nth-of-type(5) span'];
-});
-
-document.querySelectorAll('.social-icons strong').forEach(element => {
-  element.textContent = translationMap[newLanguage]['.social-icons strong']; 
-});
-
-  document.querySelectorAll('.contact-form h2').forEach(element => {
-    element.textContent = translationMap[newLanguage]['.contact-form h2'];
+  // Cập nhật các phần có danh sách hoặc nội dung phức tạp
+  document.querySelectorAll('.description-team p').forEach((element, index) => {
+    const key = `.description-team p:nth-of-type(${index + 1})`;
+    element.textContent = translationMap[newLanguage][key] || element.textContent;
   });
 
-   document.querySelectorAll('.contain-input label[for="name"]').forEach(element => {
-    element.textContent = translationMap[newLanguage]['.contain-input label[for="name"]'];
+  updateInnerHTML('.slide4-container .slide4-description p', '.slide4-container .slide4-description p');
+  updateInnerHTML('.slide4-container .commitment p', '.slide4-container .commitment p');
+
+  document.querySelectorAll('.slide4-container .box').forEach((box, index) => {
+    const description = box.querySelector('.box-description');
+    const key = `.slide4-container .box-container .box:nth-of-type(${index + 1}) .box-description`;
+    if (translationMap[newLanguage][key]) {
+      description.innerHTML = translationMap[newLanguage][key];
+    }
   });
 
-  document.querySelectorAll('.contain-input input#name').forEach(element => {
-    element.setAttribute('placeholder', translationMap[newLanguage]['.contain-input input#name']);
-  });
+  updateTextContent('.slide6-title', '.slide6-title');
+  updateInnerHTML('.slide6-description', '.slide6-description');
+  updateTextContent('.inf h1', '.inf h1');
+  updateInnerHTML('.item-contact:nth-of-type(5) span', '.item-contact:nth-of-type(5) span');
+  updateTextContent('.social-icons strong', '.social-icons strong');
 
-  document.querySelectorAll('.contain-input label[for="phone"]').forEach(element => {
-    element.textContent = translationMap[newLanguage]['.contain-input label[for="phone"]'];
-  });
-
-  document.querySelectorAll('.contain-input input#phone').forEach(element => {
-    element.setAttribute('placeholder', translationMap[newLanguage]['.contain-input input#phone']);
-  });
-
-  document.querySelectorAll('.contain-input label[for="email"]').forEach(element => {
-    element.textContent = translationMap[newLanguage]['.contain-input label[for="email"]'];
-  });
-
-  document.querySelectorAll('.contain-input input#email').forEach(element => {
-    element.setAttribute('placeholder', translationMap[newLanguage]['.contain-input input#email']);
-  });
-
-  document.querySelectorAll('.contain-input label[for="message"]').forEach(element => {
-    element.textContent = translationMap[newLanguage]['.contain-input label[for="message"]'];
-  });
-
-document.querySelectorAll('.slide-project').forEach(element => {
-    element.textContent = translationMap[newLanguage]['.slide-project'];
-  });
-
-  document.querySelectorAll('.contain-input textarea#message').forEach(element => {
-    element.setAttribute('placeholder', translationMap[newLanguage]['.contain-input textarea#message']);
-  });
-
-  document.querySelectorAll('.form-button').forEach(element => {
-    element.textContent = translationMap[newLanguage]['.form-button'];
-  });
+  // Cập nhật placeholders cho form liên hệ
+  updateTextContent('.contact-form h2', '.contact-form h2');
+  updateTextContent('.contain-input label[for="name"]', '.contain-input label[for="name"]');
+  updatePlaceholder('.contain-input input#name', '.contain-input input#name');
+  updateTextContent('.contain-input label[for="phone"]', '.contain-input label[for="phone"]');
+  updatePlaceholder('.contain-input input#phone', '.contain-input input#phone');
+  updateTextContent('.contain-input label[for="email"]', '.contain-input label[for="email"]');
+  updatePlaceholder('.contain-input input#email', '.contain-input input#email');
+  updateTextContent('.contain-input label[for="message"]', '.contain-input label[for="message"]');
+  updatePlaceholder('.contain-input textarea#message', '.contain-input textarea#message');
 });
-
-
 
 
