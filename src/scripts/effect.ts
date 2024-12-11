@@ -31,3 +31,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fadeInSections.forEach(section => observer.observe(section));
 });
+

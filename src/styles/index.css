@@ -634,3 +634,7 @@ a {
 .slide-span-project2 {
   margin-top: 2em;
 }
+
+body.no-scroll {
+  overflow: hidden;
+}

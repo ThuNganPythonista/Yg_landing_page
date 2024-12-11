@@ -222,9 +222,9 @@ document.getElementById('language-toggle').addEventListener('click', function ()
 //     element.textContent = translationMap[newLanguage]['.contain-input label[for="message"]'];
 //   });
 
-// document.querySelectorAll('.slide-project').forEach(element => {
-//     element.textContent = translationMap[newLanguage]['.slide-project'];
-//   });
+document.querySelectorAll('.slide-project').forEach(element => {
+    element.textContent = translationMap[newLanguage]['.slide-project'];
+  });
 
 //   document.querySelectorAll('.contain-input textarea#message').forEach(element => {
 //     element.setAttribute('placeholder', translationMap[newLanguage]['.contain-input textarea#message']);
@@ -311,4 +311,25 @@ document.getElementById('language-toggle').addEventListener('click', function ()
   updatePlaceholder('.contain-input textarea#message', '.contain-input textarea#message');
 });
 
+// Thêm lệnh chặn cuộn
+let allowScroll = false;
 
+// Ngăn cuộn
+const preventScroll = (e) => {
+  if (!allowScroll) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  }
+};
+
+// Bật sự kiện ngăn cuộn
+window.addEventListener("wheel", preventScroll, { passive: false });
+window.addEventListener("touchmove", preventScroll, { passive: false });
+
+// Sau 5 giây, cho phép cuộn
+setTimeout(() => {
+  allowScroll = true;
+  window.removeEventListener("wheel", preventScroll);
+  window.removeEventListener("touchmove", preventScroll);
+}, 5000);
