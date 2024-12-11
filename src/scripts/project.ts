@@ -4,6 +4,7 @@ import "swiper/css/bundle";
 const leftArrow = document.querySelector(".fa-chevron-left");
 const rightArrow = document.querySelector(".fa-chevron-right");
 const slideShow = document.querySelector(".mySwiper");
+//chỗ này 
 const slideHtml = `
     <div class="swiper-slide">
       <video loop>

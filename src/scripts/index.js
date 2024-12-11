@@ -223,6 +223,8 @@ setTimeout(() => {
 }, 5000);
 
 
+
+//chỗ này 
 const mediaQuery = window.matchMedia("(max-width: 1390px)");
 
   function handleScreenSizeChange(e) {
