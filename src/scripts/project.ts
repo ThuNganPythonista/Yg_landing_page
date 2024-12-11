@@ -86,21 +86,21 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      document
-        .querySelector<HTMLVideoElement>(".swiper-slide-active video")
-        ?.play();
-    } else {
-      document
-        .querySelector<HTMLVideoElement>(".swiper-slide-active video")
-        ?.pause();
-    }
-  });
-});
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       document
+//         .querySelector<HTMLVideoElement>(".swiper-slide-active video")
+//         ?.play();
+//     } else {
+//       document
+//         .querySelector<HTMLVideoElement>(".swiper-slide-active video")
+//         ?.pause();
+//     }
+//   });
+// });
 
-observer.observe(slideShow!);
+// observer.observe(slideShow!);
 
 swiper.on("slideChangeTransitionEnd", () => {
   const allVideos = [

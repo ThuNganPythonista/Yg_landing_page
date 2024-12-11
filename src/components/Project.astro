@@ -4,11 +4,12 @@
   <i class="fa-solid fa-chevron-left"></i>
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
+      <div class=""></div>
       {
-        //JSX
+        // JSX code to map through the slides
         Array.from({ length: 5 }).map(() => (
           <div class="swiper-slide">
-            <video loop class="slideshow-vid">
+            <video loop class="slideshow-vid" muted>
               <source src="/media/logo-fix-sqr.mp4" type="video/mp4" />
             </video>
           </div>
@@ -18,6 +19,7 @@
   </div>
   <i class="fa-solid fa-chevron-right"></i>
 </div>
+
 <span class="slide-span-project">Tell me something you would like to talk</span>
 
 <script src="/src/scripts/project.ts"></script>

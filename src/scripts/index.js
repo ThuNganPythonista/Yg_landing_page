@@ -250,3 +250,8 @@ const mediaQuery = window.matchMedia("(max-width: 1390px)");
 
   // Lắng nghe sự kiện thay đổi kích thước màn hình
   mediaQuery.addEventListener("change", handleScreenSizeChange);
+
+
+
+
+  
