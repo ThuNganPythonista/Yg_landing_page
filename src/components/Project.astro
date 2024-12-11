@@ -21,30 +21,4 @@
 <span class="slide-span-project">Tell me something you would like to talk</span>
 
 <script src="/src/scripts/project.ts"></script>
-<script id="conditional-script">
-  const mediaQuery = window.matchMedia("(max-width: 1390px)");
-
-  function handleScreenSizeChange(e) {
-    const videoElements = document.querySelectorAll(".slideshow-vid source");
-
-    if (e.matches) {
-      // Khi màn hình nhỏ hơn 1390px, đổi video
-      videoElements.forEach((video) => {
-        video.src = "/media/logo-fix-sqr.mp4";
-        video.parentElement.load();
-      });
-    } else {
-      // Khi màn hình lớn hơn 1390px, đổi lại video gốc
-      videoElements.forEach((video) => {
-        video.src = "/media/logo-fix-5.mp4";
-        video.parentElement.load();
-      });
-    }
-  }
-
-  // Xử lý ngay khi tải trang
-  handleScreenSizeChange(mediaQuery);
-
-  // Lắng nghe sự kiện thay đổi kích thước màn hình
-  mediaQuery.addEventListener("change", handleScreenSizeChange);
-</script>
+<script id="conditional-script"></script>
