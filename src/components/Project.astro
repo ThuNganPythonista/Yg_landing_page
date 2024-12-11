@@ -9,7 +9,10 @@
         Array.from({ length: 5 }).map(() => (
           <div class="swiper-slide">
             <video loop class="slideshow-vid">
-              <source src="/src/media/logo fix 5.mp4" type="video/mp4" />
+              <source
+                src="../../public/media/logo-fix-sqr.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
         ))
@@ -30,13 +33,13 @@
     if (e.matches) {
       // Khi màn hình nhỏ hơn 1390px, đổi video
       videoElements.forEach((video) => {
-        video.src = "/src/media/logo-fix-sqr.mp4";
+        video.src = "../../public/media/logo-fix-sqr.mp4";
         video.parentElement.load();
       });
     } else {
       // Khi màn hình lớn hơn 1390px, đổi lại video gốc
       videoElements.forEach((video) => {
-        video.src = "/src/media/logo fix 5.mp4";
+        video.src = "../../public/media/logo-fix-5.mp4";
         video.parentElement.load();
       });
     }
