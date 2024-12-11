@@ -7,14 +7,14 @@ const slideShow = document.querySelector(".mySwiper");
 const slideHtml = `
     <div class="swiper-slide">
       <video loop>
-        <source src="/src/media/logo fix 5.mp4" type="video/mp4" />
+        <source src="/media/logo-fix-5.mp4" type="video/mp4" />
       </video>
     </div>
   `;
 const slideHtmlSmaller = `
     <div class="swiper-slide">
       <video loop>
-        <source src="/src/media/logo-fix-sqr.mp4" />
+        <source src="/media/logo-fix-sqr.mp4" />
       </video>
     </div>
   `;
