@@ -646,13 +646,13 @@ body.no-scroll {
   overflow: hidden;
 }
 
-body:not(.swiper-ready) .mySwiper {
+.mySwiper {
   visibility: hidden;
   opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-body.swiper-ready .mySwiper {
+.mySwiper.initialized {
   visibility: visible;
   opacity: 1;
-  transition: opacity 0.3s ease;
 }

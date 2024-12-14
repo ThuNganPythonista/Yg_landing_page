@@ -108,6 +108,14 @@ const swiper = new Swiper(".mySwiper", {
 
 // observer.observe(slideShow!);
 
+swiper.on("init", () => {
+  const slideShow = document.querySelector(".mySwiper");
+  if (slideShow) slideShow.classList.add("initialized");
+});
+
+// Kích hoạt sự kiện init
+swiper.init();
+
 swiper.on("slideChangeTransitionEnd", () => {
   const allVideos = [
     ...document.querySelectorAll<HTMLVideoElement>(".swiper-slide video"),
@@ -170,9 +178,6 @@ swiper.on("slidePrevTransitionEnd", () => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.add("swiper-ready");
-});
 
 
 
