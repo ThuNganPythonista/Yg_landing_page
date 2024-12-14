@@ -165,11 +165,10 @@ swiper.on("slidePrevTransitionEnd", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Chọn phần tử mà bạn muốn đảm bảo load cuối cùng
+
   const slideProject = document.querySelector(".swiper-slide");
   const slideshowContainer = document.querySelector(".slideshow-container");
 
-  // Ẩn phần tử trước khi toàn bộ nội dung được tải xong
   if (slideProject) {
     (slideProject as HTMLElement).style.visibility = "hidden";
   }
@@ -177,7 +176,6 @@ document.addEventListener("DOMContentLoaded", () => {
     (slideshowContainer as HTMLElement).style.visibility = "hidden";
   }
 
-  // Đợi toàn bộ tài nguyên trang web được tải xong
   window.addEventListener("load", () => {
     if (slideProject) {
       (slideProject as HTMLElement).style.visibility = "visible";
