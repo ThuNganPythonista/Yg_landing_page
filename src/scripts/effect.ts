@@ -32,3 +32,25 @@ document.addEventListener("DOMContentLoaded", () => {
   fadeInSections.forEach(section => observer.observe(section));
 });
 
+//chỉ scroll xuống đc khi video được tải xong 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const videoElement = document.querySelector<HTMLVideoElement>("#slide1 video");
+
+  if (videoElement) {
+    document.body.style.overflow = "hidden";
+
+    videoElement.addEventListener("canplaythrough", () => {
+      document.body.style.overflow = "auto";
+    });
+
+    setTimeout(() => {
+      if (!videoElement.readyState) {
+        console.warn("Video is taking too long to load, enabling scroll.");
+        document.body.style.overflow = "auto";
+      }
+    }, 10000); 
+  } else {
+    console.error("Video element not found!");
+  }
+});
