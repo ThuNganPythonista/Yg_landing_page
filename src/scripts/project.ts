@@ -4,7 +4,7 @@ import "swiper/css/bundle";
 const leftArrow = document.querySelector(".fa-chevron-left");
 const rightArrow = document.querySelector(".fa-chevron-right");
 const slideShow = document.querySelector(".mySwiper");
-//chỗ này 
+
 const slideHtml = `
     <div class="swiper-slide">
       <video loop>
@@ -86,6 +86,12 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
+
+// // Auto click slideNext on page load
+// window.addEventListener("load", () => {
+//   // Trigger the next slide once
+//   swiper.slideNext();
+// });
 // const observer = new IntersectionObserver((entries) => {
 //   entries.forEach((entry) => {
 //     if (entry.isIntersecting) {
@@ -111,10 +117,10 @@ swiper.on("slideChangeTransitionEnd", () => {
     video.pause();
   });
 
-  const currentVideo = document.querySelector<HTMLVideoElement>(
-    ".swiper-slide-active video"
-  );
-  currentVideo?.play();
+  // const currentVideo = document.querySelector<HTMLVideoElement>(
+  //   ".swiper-slide-active video"
+  // );
+  // currentVideo?.play();
 });
 
 swiper.on("slidePrevTransitionEnd", () => {
@@ -164,25 +170,4 @@ swiper.on("slidePrevTransitionEnd", () => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
 
-  const slideProject = document.querySelector(".swiper-slide");
-  const slideshowContainer = document.querySelector(".slideshow-container");
-
-  if (slideProject) {
-    (slideProject as HTMLElement).style.visibility = "hidden";
-  }
-  if (slideshowContainer) {
-    (slideshowContainer as HTMLElement).style.visibility = "hidden";
-  }
-
-  window.addEventListener("load", () => {
-    if (slideProject) {
-      (slideProject as HTMLElement).style.visibility = "visible";
-    }
-    if (slideshowContainer) {
-      (slideshowContainer as HTMLElement).style.visibility = "visible";
-    }
-    console.log("DOM elements fully loaded and displayed!");
-  });
-});
