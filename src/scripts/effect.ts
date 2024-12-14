@@ -32,25 +32,30 @@ document.addEventListener("DOMContentLoaded", () => {
   fadeInSections.forEach(section => observer.observe(section));
 });
 
-//chỉ scroll xuống đc khi video được tải xong 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const videoElement = document.querySelector<HTMLVideoElement>("#slide1 video");
+// Disable scroll by setting overflow to 'hidden'
+function disableScroll(): void {
+  document.body.style.overflow = "hidden";
+}
 
-  if (videoElement) {
-    document.body.style.overflow = "hidden";
+// Enable scroll by restoring overflow to 'auto'
+function enableScroll(): void {
+  document.body.style.overflow = "auto";
+}
 
-    videoElement.addEventListener("canplaythrough", () => {
-      document.body.style.overflow = "auto";
-    });
+// Main function to control scroll behavior
+function waitForPageLoad(): void {
+  // Disable scroll initially
+  disableScroll();
 
-    setTimeout(() => {
-      if (!videoElement.readyState) {
-        console.warn("Video is taking too long to load, enabling scroll.");
-        document.body.style.overflow = "auto";
-      }
-    }, 10000); 
-  } else {
-    console.error("Video element not found!");
-  }
-});
+  // Wait until all resources are fully loaded
+  window.addEventListener("load", () => {
+    console.log("All resources have been loaded!");
+
+    // Enable scroll once loading is complete
+    enableScroll();
+  });
+}
+
+// Call the main function
+waitForPageLoad();
