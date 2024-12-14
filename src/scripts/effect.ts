@@ -1,3 +1,34 @@
+
+
+// Disable scroll by setting overflow to 'hidden'
+function disableScroll(): void {
+  document.body.style.overflow = "hidden";
+}
+
+// Enable scroll by restoring overflow to 'auto'
+function enableScroll(): void {
+  document.body.style.overflow = "auto";
+}
+
+// Main function to control scroll behavior
+function waitForPageLoad(): void {
+  // Disable scroll initially
+  disableScroll();
+
+  // Wait until all resources are fully loaded
+  window.addEventListener("load", () => {
+    console.log("All resources have been loaded!");
+
+    // Enable scroll once loading is complete
+    enableScroll();
+  });
+}
+
+// Call the main function
+waitForPageLoad();
+
+
+
 const navigation = document.getElementById('navigation') as HTMLElement;
 const container = document.querySelector('.container') as HTMLElement;
 
@@ -33,29 +64,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Disable scroll by setting overflow to 'hidden'
-function disableScroll(): void {
-  document.body.style.overflow = "hidden";
-}
 
-// Enable scroll by restoring overflow to 'auto'
-function enableScroll(): void {
-  document.body.style.overflow = "auto";
-}
-
-// Main function to control scroll behavior
-function waitForPageLoad(): void {
-  // Disable scroll initially
-  disableScroll();
-
-  // Wait until all resources are fully loaded
-  window.addEventListener("load", () => {
-    console.log("All resources have been loaded!");
-
-    // Enable scroll once loading is complete
-    enableScroll();
-  });
-}
-
-// Call the main function
-waitForPageLoad();
