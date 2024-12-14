@@ -645,3 +645,14 @@ a {
 body.no-scroll {
   overflow: hidden;
 }
+
+body:not(.swiper-ready) .mySwiper {
+  visibility: hidden;
+  opacity: 0;
+}
+
+body.swiper-ready .mySwiper {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}

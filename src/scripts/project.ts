@@ -117,10 +117,10 @@ swiper.on("slideChangeTransitionEnd", () => {
     video.pause();
   });
 
-  // const currentVideo = document.querySelector<HTMLVideoElement>(
-  //   ".swiper-slide-active video"
-  // );
-  // currentVideo?.play();
+  const currentVideo = document.querySelector<HTMLVideoElement>(
+    ".swiper-slide-active video"
+  );
+  currentVideo?.play();
 });
 
 swiper.on("slidePrevTransitionEnd", () => {
@@ -166,6 +166,12 @@ swiper.on("slideNextTransitionEnd", () => {
 
 swiper.on("slidePrevTransitionEnd", () => {
   swiper.update(); // Cập nhật tương tự cho prev
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("swiper-ready");
 });
 
 
