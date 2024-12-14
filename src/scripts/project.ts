@@ -161,3 +161,23 @@ swiper.on("slideNextTransitionEnd", () => {
 swiper.on("slidePrevTransitionEnd", () => {
   swiper.update(); // Cập nhật tương tự cho prev
 });
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Chọn phần tử mà bạn muốn đảm bảo load cuối cùng
+  const slideshowContainer = document.querySelector(".slideshow-container");
+
+
+  if (slideshowContainer) {
+    (slideshowContainer as HTMLElement).style.visibility = "hidden";
+  }
+  // Đợi toàn bộ tài nguyên trang web được tải xong
+  window.addEventListener("load", () => {
+
+    if (slideshowContainer) {
+      (slideshowContainer as HTMLElement).style.visibility = "visible";
+    }
+    console.log("DOM elements fully loaded and displayed!");
+  });
+});
