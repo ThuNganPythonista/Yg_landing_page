@@ -12,13 +12,6 @@ const slideHtml = `
       </video>
     </div>
   `;
-const slideHtmlSmaller = `
-    <div class="swiper-slide">
-      <video loop>
-        <source src= "/media/logo-fix-sqr.mp4" />
-      </video>
-    </div>
-  `;
 const swiper = new Swiper(".mySwiper", {
   allowTouchMove: false,
   initialSlide: 4,
