@@ -136,25 +136,15 @@ swiper.on("slideNextTransitionEnd", () => {
 const mediaQuery = window.matchMedia("(min-width: 1390px)");
 
 leftArrow?.addEventListener("click", async () => {
-  if (mediaQuery.matches) {
-    // Khi màn hình lớn hơn 1390px, thêm slideHtml
-    swiper.prependSlide(slideHtml);
-  } else {
-    // Khi màn hình nhỏ hơn hoặc bằng 1390px, thêm slideHtmlSmaller
-    swiper.prependSlide(slideHtmlSmaller);
-  }
+  // Thêm slideHtml vào đầu
+  swiper.prependSlide(slideHtml);
   await new Promise((resolve) => setTimeout(resolve, 10));
   swiper.slidePrev();
 });
 
 rightArrow?.addEventListener("click", async () => {
-  if (mediaQuery.matches) {
-    // Khi màn hình lớn hơn 1390px, thêm slideHtml
-    swiper.appendSlide(slideHtml);
-  } else {
-    // Khi màn hình nhỏ hơn hoặc bằng 1390px, thêm slideHtmlSmaller
-    swiper.appendSlide(slideHtmlSmaller);
-  }
+  // Thêm slideHtml vào cuối
+  swiper.appendSlide(slideHtml);
   await new Promise((resolve) => setTimeout(resolve, 10));
   swiper.slideNext();
 });
