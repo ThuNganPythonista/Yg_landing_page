@@ -169,11 +169,10 @@ async function nextSlide() {
   swiper.slideNext();
 }
 
-// Thêm sự kiện click vào rightArrow
 rightArrow?.addEventListener("click", nextSlide);
 
 // Thiết lập mặc định tự động chuyển slide mỗi 10 giây
-setInterval(nextSlide, 10000); // 10000ms = 10 giây
+setInterval(nextSlide, 2000); // 10000ms = 10 giây
 
 
 let lastScrollY = 0; // Vị trí scroll trước đó
