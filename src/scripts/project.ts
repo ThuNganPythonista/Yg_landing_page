@@ -12,6 +12,13 @@ const slideHtml = `
       </video>
     </div>
   `;
+  const slideHtmlSmaller = `
+    <div class="swiper-slide">
+      <video loop>
+        <source src= "/media/logo-fix-sqr.mp4"type="video/mp4" />
+      </video>
+    </div>
+  `;
 const swiper = new Swiper(".mySwiper", {
   allowTouchMove: false,
   initialSlide: 4,
@@ -80,11 +87,6 @@ const swiper = new Swiper(".mySwiper", {
 });
 
 
-// Auto click slideNext on page load
-window.addEventListener("load", () => {
-  // Trigger the next slide once
-  swiper.slideNext();
-});
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -127,19 +129,39 @@ swiper.on("slideNextTransitionEnd", () => {
 
 
 const mediaQuery = window.matchMedia("(min-width: 1390px)");
-
 leftArrow?.addEventListener("click", async () => {
-  // Thêm slideHtml vào đầu
-  swiper.prependSlide(slideHtml);
+  if (mediaQuery.matches) {
+    // Khi màn hình lớn hơn 1390px, thêm slideHtml
+    swiper.prependSlide(slideHtml);
+  } else {
+    // Khi màn hình nhỏ hơn hoặc bằng 1390px, thêm slideHtmlSmaller
+    swiper.prependSlide(slideHtmlSmaller);
+  }
   await new Promise((resolve) => setTimeout(resolve, 10));
   swiper.slidePrev();
 });
 
-rightArrow?.addEventListener("click", async () => {
-  // Thêm slideHtml vào cuối
-  swiper.appendSlide(slideHtml);
-  await new Promise((resolve) => setTimeout(resolve, 10));
-  swiper.slideNext();
+let lastScrollY = 0; // Vị trí scroll trước đó
+const scrollThreshold = 100; // Mỗi 100px scroll sẽ kích hoạt sự kiện
+
+window.addEventListener("scroll", async () => {
+  const currentScrollY = window.scrollY; // Vị trí scroll hiện tại
+
+  if (currentScrollY - lastScrollY >= scrollThreshold) {
+    lastScrollY = currentScrollY; // Cập nhật lại vị trí scroll trước đó
+
+    // Thực hiện logic như khi bấm vào nút slideNext
+    if (mediaQuery.matches) {
+      // Khi màn hình lớn hơn 1390px, thêm slideHtml
+      swiper.appendSlide(slideHtml);
+    } else {
+      // Khi màn hình nhỏ hơn hoặc bằng 1390px, thêm slideHtmlSmaller
+      swiper.appendSlide(slideHtmlSmaller);
+    }
+
+    await new Promise((resolve) => setTimeout(resolve, 10));
+    swiper.slideNext();
+  }
 });
 
 
