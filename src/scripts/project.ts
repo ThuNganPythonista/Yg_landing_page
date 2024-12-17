@@ -80,26 +80,26 @@ const swiper = new Swiper(".mySwiper", {
 });
 
 
-// // Auto click slideNext on page load
-// window.addEventListener("load", () => {
-//   // Trigger the next slide once
-//   swiper.slideNext();
-// });
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-//       document
-//         .querySelector<HTMLVideoElement>(".swiper-slide-active video")
-//         ?.play();
-//     } else {
-//       document
-//         .querySelector<HTMLVideoElement>(".swiper-slide-active video")
-//         ?.pause();
-//     }
-//   });
-// });
+// Auto click slideNext on page load
+window.addEventListener("load", () => {
+  // Trigger the next slide once
+  swiper.slideNext();
+});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      document
+        .querySelector<HTMLVideoElement>(".swiper-slide-active video")
+        ?.play();
+    } else {
+      document
+        .querySelector<HTMLVideoElement>(".swiper-slide-active video")
+        ?.pause();
+    }
+  });
+});
 
-// observer.observe(slideShow!);
+observer.observe(slideShow!);
 
 
 swiper.on("slideChangeTransitionEnd", () => {
