@@ -141,6 +141,18 @@ leftArrow?.addEventListener("click", async () => {
   swiper.slidePrev();
 });
 
+rightArrow?.addEventListener("click", async () => {
+  if (mediaQuery.matches) {
+    // Khi màn hình lớn hơn 1390px, thêm slideHtml
+    swiper.appendSlide(slideHtml);
+  } else {
+    // Khi màn hình nhỏ hơn hoặc bằng 1390px, thêm slideHtmlSmaller
+    swiper.appendSlide(slideHtmlSmaller);
+  }
+  await new Promise((resolve) => setTimeout(resolve, 10));
+  swiper.slideNext();
+});
+
 let lastScrollY = 0; // Vị trí scroll trước đó
 const scrollThreshold = 100; // Mỗi 100px scroll sẽ kích hoạt sự kiện
 
