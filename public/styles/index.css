@@ -5,6 +5,32 @@
   margin: 0;
   padding: 0;
 }
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+button,
+label {
+  font-family: 'Poppins', sans-serif;
+}
+
+.fa,
+.fas,
+.far,
+.fal,
+.fab {
+  font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+  font-weight: 900;
+  /* Nếu cần cho icon solid */
+}
+
 .navigation {
   position: fixed;
   top: 0;
@@ -14,8 +40,11 @@
   z-index: 10;
   padding: 1rem 2rem;
 }
-
-.navigation.hidden {
+.hidden {
+  display: none !important;
+}
+.navigation.hidden,
+.imgNav.hidden {
   opacity: 0;
   visibility: hidden;
   height: 0;
@@ -24,12 +53,13 @@
 .navigation ul {
   display: flex;
   justify-content: flex-end;
-  gap: 1.5rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
+#slide1 video{
+  z-index: 1000;
+}
 .navigation a,
 .list-item a {
   color: white;
@@ -44,7 +74,10 @@
     transform 0.3s ease-in-out,
     opacity 0.3s ease-in-out;
 }
-
+.navigation a{
+  font-weight: 0 !important;
+  font-size: 0.9em !important;
+}
 .navigation a:focus,
 .navigation a:hover,
 .list-item a:hover {
@@ -129,6 +162,7 @@ html {
 .icon {
   font-size: 1.5rem;
   margin-right: 12px;
+  color:#fa8500;
 }
 
 .service-icon {
@@ -208,8 +242,22 @@ html {
 .yg-team .big-sign {
   font-size: 14rem;
   font-weight: bold;
-  color: #fa8500;
+  color: #FFCC99;
   margin-bottom: -72px;
+}
+.big-size{
+    text-shadow: 0 0 10px #fa8500, 0 0 20px #fa8500, 0 0 30px #ffa500, 0 0 40px #ffa500, 0 0 50px #ff4500, 0 0 60px #ff4500;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #fa8500, 0 0 20px #fa8500, 0 0 30px #ffa500, 0 0 40px #ffa500, 0 0 50px #ff4500, 0 0 60px #ff4500;
+  }
+
+  100% {
+    text-shadow: 0 0 20px #ffa500, 0 0 30px #ffa500, 0 0 40px #ff4500, 0 0 50px #ff4500, 0 0 60px #ff6347, 0 0 70px #ff6347;
+  }
 }
 
 .yg-team p {
@@ -253,7 +301,7 @@ html {
   font-size: 1.25rem;
   line-height: 1.6;
   color: white;
-  max-width: 47em;
+  max-width: 50em;
 }
 
 /* Div 2: Bốn ô vuông nằm ngang */
@@ -290,7 +338,7 @@ html {
 }
 
 .box i {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #fa8500;
   margin-bottom: 10px;
 }
@@ -493,7 +541,7 @@ a {
   height: 40%;
 }
 .social-icons strong {
-  width: 9em;
+  width: 10em;
 }
 .rights {
   height: 1em;
@@ -554,20 +602,21 @@ a {
 }
 
 #message {
-  height: 13px;
-  background-color: #ff8500;
-  color: white;
-  border: none;
-  outline: non;
-  padding: 8px;
-  border-radius: 5px;
-  font-size: 12px;
-  resize: vertical;
-  width: 100%;
-  min-height: 34.5px;
-  box-sizing: border-box;
-  margin-top: 9px;
-  text-decoration: none;
+  font-family: sans-serif;
+    height: 13px;
+    background-color: #ff8500;
+    color: white;
+    border: none;
+    outline: non;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    resize: vertical;
+    width: 100%;
+    min-height: 30.5px;
+    box-sizing: border-box;
+    margin-top: 9px;
+    text-decoration: none;
 }
 
 #message::placeholder {
@@ -646,3 +695,110 @@ body.no-scroll {
   overflow: hidden;
 }
 
+.imgNav {
+      position: fixed;
+      top: -8px;
+      left: 75px;
+      z-index: 999;
+      cursor: grab;
+      transition: transform 0.3s ease;
+}
+
+.list-item div {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  /* Khoảng cách từ icon tới border */
+  border: 1px solid white;
+  /* Viền chính */
+  border-radius: 4px;
+  /* Tạo cảm giác mềm mại */
+}
+
+.list-item div::before,
+.list-item div::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  /* Độ dài của góc */
+  height: 6px;
+  /* Độ dài của góc */
+  border: 2px solid white;
+  /* Viền góc dày 2px */
+}
+
+.list-item div::before {
+  top: -1px;
+  /* Dịch lên trên cho đúng vị trí */
+  left: -1px;
+  /* Dịch qua trái */
+  border-right: none;
+  border-bottom: none;
+}
+
+.list-item div::after {
+  bottom: -1px;
+  /* Dịch xuống */
+  right: -1px;
+  /* Dịch qua phải */
+  border-left: none;
+  border-top: none;
+}
+
+/* Thẻ div bao bọc thẻ i */
+.box-i {
+  position: relative;
+  display: inline-block;
+  border: 1px solid white;
+  padding-top: 6px;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+/* Góc dày 2px */
+.box-i::before,
+.box-i::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  /* Độ dài góc */
+  height: 8px;
+  /* Độ dài góc */
+  border: 2px solid white;
+  /* Viền 2px cho góc */
+  background: transparent;
+  /* Đảm bảo không bị chồng lấp */
+}
+
+/* Góc trên bên trái */
+.box-i::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Góc dưới bên phải */
+.box-i::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
+ 
+.navigation-mobile{
+  display:none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.dropdown-content {
+    transition: transform 0.3s ease;
+    margin-top: 1%;
+    right: 5%;
+}

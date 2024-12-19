@@ -252,6 +252,9 @@ const mediaQuery = window.matchMedia("(max-width: 1390px)");
   mediaQuery.addEventListener("change", handleScreenSizeChange);
 
 
+// Toggle the navigation on mobile
+
+
 
 
   

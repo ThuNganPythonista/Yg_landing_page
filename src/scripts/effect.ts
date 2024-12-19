@@ -31,16 +31,25 @@ waitForPageLoad();
 
 const navigation = document.getElementById('navigation') as HTMLElement;
 const container = document.querySelector('.container') as HTMLElement;
+const navImg = document.querySelector('.imgNav') as HTMLElement;
 
 container.addEventListener('scroll', () => {
   const scrollTop = container.scrollTop;
 
-  if (scrollTop > window.innerHeight / 2) {
-    navigation.classList.remove('hidden');
+  // Ẩn/hiện thanh điều hướng
+  navigation.classList.toggle('hidden', scrollTop <= window.innerHeight / 2);
+
+    // Kiểm tra nếu màn hình rộng >= 1025px
+  if (window.innerWidth >= 1025) {
+    navImg.classList.toggle('hidden', scrollTop <= window.innerHeight / 2);
   } else {
-    navigation.classList.add('hidden');
+    // Luôn hiển thị navImg dưới 1025px
+    navImg.classList.remove('hidden');
   }
+
+
 });
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
