@@ -747,7 +747,9 @@
   }
   .contact-us-mobile {
       display: flex;
+      flex-direction:column;
       background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
   }
   
   .rights-mobile {
@@ -757,10 +759,12 @@
   .include-information-company{
     display: flex;
     flex-direction: column;
+    text-align: left;
   }
   .include-contact-company{
     display: flex;
     flex-direction: column;
+    text-align: left;
   }
   .rights-mobile img{
     width:20%;
@@ -769,6 +773,10 @@
   .rights-mobile{
     display: block;
   }
+  .include-information-footer{
+    display: flex;
+  }
+  
 }
 
 /* iPad (landscape) */
