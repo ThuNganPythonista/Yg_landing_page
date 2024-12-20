@@ -1,9 +1,9 @@
-import Swiper from "swiper/bundle";
-import "swiper/css/bundle";
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 
-const leftArrow = document.querySelector(".fa-chevron-left");
-const rightArrow = document.querySelector(".fa-chevron-right");
-const slideShow = document.querySelector(".mySwiper");
+const leftArrow = document.querySelector('.fa-chevron-left');
+const rightArrow = document.querySelector('.fa-chevron-right');
+const slideShow = document.querySelector('.mySwiper');
 
 const slideHtml = `
     <div class="swiper-slide">
@@ -12,18 +12,18 @@ const slideHtml = `
       </video>
     </div>
   `;
-  const slideHtmlSmaller = `
+const slideHtmlSmaller = `
     <div class="swiper-slide">
       <video loop>
         <source src= "/media/logo-fix-sqr.mp4"type="video/mp4" />
       </video>
     </div>
   `;
-const swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper('.mySwiper', {
   allowTouchMove: false,
   initialSlide: 4,
-  slidesPerView: "auto",
-  effect: "coverflow",
+  slidesPerView: 'auto',
+  effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
   spaceBetween: -400,
@@ -38,8 +38,8 @@ const swiper = new Swiper(".mySwiper", {
     1800: {
       allowTouchMove: false,
       initialSlide: 4,
-      slidesPerView: "auto",
-      effect: "coverflow",
+      slidesPerView: 'auto',
+      effect: 'coverflow',
       grabCursor: true,
       centeredSlides: true,
       spaceBetween: -400,
@@ -54,8 +54,8 @@ const swiper = new Swiper(".mySwiper", {
     1390: {
       allowTouchMove: false,
       initialSlide: 2,
-      slidesPerView: "auto",
-      effect: "coverflow",
+      slidesPerView: 'auto',
+      effect: 'coverflow',
       grabCursor: true,
       centeredSlides: true,
       spaceBetween: -550,
@@ -70,8 +70,8 @@ const swiper = new Swiper(".mySwiper", {
     1000: {
       allowTouchMove: false,
       initialSlide: 2,
-      slidesPerView: "auto",
-      effect: "coverflow",
+      slidesPerView: 'auto',
+      effect: 'coverflow',
       grabCursor: true,
       centeredSlides: true,
       spaceBetween: -600,
@@ -86,16 +86,15 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       document
-        .querySelector<HTMLVideoElement>(".swiper-slide-active video")
+        .querySelector<HTMLVideoElement>('.swiper-slide-active video')
         ?.play();
     } else {
       document
-        .querySelector<HTMLVideoElement>(".swiper-slide-active video")
+        .querySelector<HTMLVideoElement>('.swiper-slide-active video')
         ?.pause();
     }
   });
@@ -103,10 +102,9 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(slideShow!);
 
-
-swiper.on("slideChangeTransitionEnd", () => {
+swiper.on('slideChangeTransitionEnd', () => {
   const allVideos = [
-    ...document.querySelectorAll<HTMLVideoElement>(".swiper-slide video"),
+    ...document.querySelectorAll<HTMLVideoElement>('.swiper-slide video'),
   ];
   allVideos.forEach((video) => {
     video.currentTime = 0;
@@ -114,22 +112,21 @@ swiper.on("slideChangeTransitionEnd", () => {
   });
 
   const currentVideo = document.querySelector<HTMLVideoElement>(
-    ".swiper-slide-active video"
+    '.swiper-slide-active video'
   );
   currentVideo?.play();
 });
 
-swiper.on("slidePrevTransitionEnd", () => {
+swiper.on('slidePrevTransitionEnd', () => {
   swiper.removeSlide(swiper.slides.length - 1);
 });
 
-swiper.on("slideNextTransitionEnd", () => {
+swiper.on('slideNextTransitionEnd', () => {
   swiper.removeSlide(0);
 });
 
-
-const mediaQuery = window.matchMedia("(min-width: 1390px)");
-leftArrow?.addEventListener("click", async () => {
+const mediaQuery = window.matchMedia('(min-width: 1390px)');
+leftArrow?.addEventListener('click', async () => {
   if (mediaQuery.matches) {
     // Khi màn hình lớn hơn 1390px, thêm slideHtml
     swiper.prependSlide(slideHtml);
@@ -141,9 +138,7 @@ leftArrow?.addEventListener("click", async () => {
   swiper.slidePrev();
 });
 
-
-
-rightArrow?.addEventListener("click", async () => {
+rightArrow?.addEventListener('click', async () => {
   if (mediaQuery.matches) {
     // Khi màn hình lớn hơn 1390px, thêm slideHtml
     swiper.appendSlide(slideHtml);
@@ -154,7 +149,6 @@ rightArrow?.addEventListener("click", async () => {
   await new Promise((resolve) => setTimeout(resolve, 10));
   swiper.slideNext();
 });
-
 
 // Hàm chuyển slideNext
 async function nextSlide() {
@@ -169,16 +163,15 @@ async function nextSlide() {
   swiper.slideNext();
 }
 
-rightArrow?.addEventListener("click", nextSlide);
+rightArrow?.addEventListener('click', nextSlide);
 
 // Thiết lập mặc định tự động chuyển slide mỗi 10 giây
 setInterval(nextSlide, 2000); // 10000ms = 10 giây
 
-
 let lastScrollY = 0; // Vị trí scroll trước đó
 const scrollThreshold = 100; // Mỗi 100px scroll sẽ kích hoạt sự kiện
 
-window.addEventListener("scroll", async () => {
+window.addEventListener('scroll', async () => {
   const currentScrollY = window.scrollY; // Vị trí scroll hiện tại
 
   if (currentScrollY - lastScrollY >= scrollThreshold) {
@@ -198,19 +191,11 @@ window.addEventListener("scroll", async () => {
   }
 });
 
-
 // Đảm bảo Swiper được cập nhật đúng sau khi thêm hoặc xoá slide
-swiper.on("slideNextTransitionEnd", () => {
+swiper.on('slideNextTransitionEnd', () => {
   swiper.update(); // Cập nhật Swiper để đảm bảo nó nhận diện các slide mới
 });
 
-swiper.on("slidePrevTransitionEnd", () => {
+swiper.on('slidePrevTransitionEnd', () => {
   swiper.update(); // Cập nhật tương tự cho prev
 });
-
-
-
-
-
-
-
