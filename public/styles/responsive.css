@@ -750,11 +750,11 @@
       flex-direction:column;
       background-color: rgba(0, 0, 0, 0.7);
       width: 100%;
+      align-items: center;
   }
   
   .rights-mobile {
       display: flex;
-      background-color: rgba(0, 0, 0, 0.7);
   }
   .include-information-company{
     display: flex;
@@ -774,9 +774,50 @@
     display: block;
   }
   .include-information-footer{
-    display: flex;
+      display: flex;
+      gap: 10%;
+      width: 100%;
+      align-items: center;
+      margin-top: 1%;
+      justify-content: center;
   }
-  
+  .page-container{
+    margin-top: auto;
+    width:100%;
+  }
+  .rights-mobile img{
+    width: 10%; 
+  }
+  .line-footer{
+      margin-bottom:10px;
+      height: 1px;
+      width: 4em;
+      background-color: #fa8500;
+  }
+  .line-footer2{
+      margin-bottom: 10px;
+      height: 1px;
+      width: 11em;
+      background-color: #fa8500;
+  }
+  .rights-mobile img {
+    width: 10%;
+    margin-top: -37px;
+    margin-bottom: -15px;
+  }
+  .rights-mobile p {
+    padding-top: 2%;
+  }
+  .include-contact-company a {
+    color : white;
+  }
+  .include-contact-company a:nth-of-type(2){
+    display:flex; 
+  }
+  .include-contact-company a:nth-of-type(2) img{
+    margin-right: 10px;
+    margin-bottom: 12px;
+  }
 }
 
 /* iPad (landscape) */
