@@ -818,3 +818,6 @@ body.no-scroll {
 .contact-us-mobile{
   display:none;
 }
+.contact-form.mobile{
+  display:none;
+}

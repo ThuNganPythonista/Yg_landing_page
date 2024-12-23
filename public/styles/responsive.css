@@ -606,7 +606,7 @@
 }
 
 /* iPad (portrait) */
-@media (max-width: 1024px) {
+@media (max-width: 1199px) {
   .navigation {
     display: none;
   }
@@ -817,6 +817,34 @@
   .include-contact-company a:nth-of-type(2) img{
     margin-right: 10px;
     margin-bottom: 12px;
+  }
+  .contact-form.mobile {
+    display: block;
+    width: 53%;
+    margin-bottom: 3%;
+    text-align: left;
+    margin-top: 8%;
+  }
+  .contain-input{
+    text-align:left;
+  }
+  .include-contact-form.mobile{
+    padding: 1em;
+    width: 100%;
+  }
+}
+
+@media (max-width: 911px) {
+  .yg-team{
+     margin-left: 0em;
+     margin-right: 0em;
+     margin-top: 3em;
+  }
+  .container-slide3{
+    display: contents;
+  }
+  .description-team{
+    margin-top:0em;
   }
 }
 

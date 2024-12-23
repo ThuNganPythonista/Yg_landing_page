@@ -119,6 +119,60 @@
 </div>
 
 <!-- //dùng chi Ipad mobile  -->
+<!-- //contact form cho ipad  -->
+<div class="contact-form mobile">
+  <div class="include-contact-form mobile">
+    <h2>Thông tin liên hệ</h2>
+    <form action="/submit-contact" method="POST">
+      <div class="contain-input mobile">
+        <label for="name">Tên</label><br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Nhập tên của bạn"
+          required
+        />
+      </div>
+      <br />
+      <div class="contain-input mobile">
+        <label for="phone">Điện thoại</label><br />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Nhập số điện thoại"
+          pattern="[0-9]{10,11}"
+          required
+        />
+      </div>
+      <br />
+      <div class="contain-input mobile">
+        <label for="email">Email</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Nhập địa chỉ email"
+          required
+        />
+      </div>
+      <br />
+      <div class="contain-input mobile">
+        <label for="message">Lời nhắn</label><br />
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Nhập lời nhắn của bạn"
+          required></textarea>
+      </div>
+      <!-- <br /> -->
+      <button class="form-button" type="submit">Gửi</button>
+    </form>
+  </div>
+</div>
+
 <footer class="page-container">
   <div class="contact-us-mobile">
     <div class="include-information-footer">
