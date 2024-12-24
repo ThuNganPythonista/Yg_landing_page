@@ -834,17 +834,109 @@
   }
 }
 
+@media (max-width: 815px){
+  .slide4-description p {
+      text-align: left;
+      line-height: 1.6;
+      word-wrap: break-word;
+
+    }
+  
+  .slide4-description strong {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #fa8500;
+  }
+  .slide4-description strong {
+          display: block;
+          text-align: left;
+          font-size: 1.2em;
+          color: #fa8500;
+  }
+    
+  .slide4-description strong .line-top,
+  .slide4-description strong .line-bottom {
+          display: block;
+  }
+    
+  .slide4-description strong .line-top {
+          margin-bottom: 5px;
+          color: #fa8500;
+  }
+    
+  .slide4-description strong .line-bottom {
+          margin-top: 5px;
+          text-align:left;
+          font-weight:bold;
+          color: #fa8500;
+  }
+
+  .slide4-description p {
+              text-align: left;
+              margin-bottom: 15px;
+  }
+      
+  .slide4-description .line-top,
+  .slide4-description .line-bottom {
+              display: block;
+              font-size: 1em;
+  }
+      
+  .slide4-description .line-top {
+          
+              color: white;
+  }
+      
+  .slide4-description .line-bottom {
+              font-weight: normal;
+              color: white;
+              margin-top: 5px;
+  }
+            
+  
+}
+
 @media (max-width: 911px) {
   .yg-team{
      margin-left: 0em;
      margin-right: 0em;
      margin-top: 3em;
+     max-width: 100%;
   }
   .container-slide3{
     display: contents;
   }
   .description-team{
     margin-top:0em;
+    max-width:80%;
+  }
+  .yg-team p{
+    font-weight:600;
+  }
+
+}
+@media (max-width:550px){
+  .box-container {
+    display: contents;
+  }
+}
+
+@media (max-width:668px){
+  .commitment p{
+    text-align:left;
+  }
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 43px;
+    justify-items: center;
+  }
+
+  .logo-item img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
