@@ -1,3 +1,4 @@
+
 document.querySelectorAll('.navigation a').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -117,8 +118,6 @@ document
           'We are a unit specializing in event organization, brand activation, decoration... With a young, enthusiastic, and creative team, alongside experienced leaders in this field. Furthermore, YG continuously asserts its unique identity, fostering innovative thinking and youthful energy to bring real value in every project we carry out for our clients.',
         '.description-team p:nth-of-type(2)':
           'Let YG accompany you and create unique values through the construction of an inspiring and creative experience journey driven by emotions.',
-        // '.slide4-container .slide4-description p':
-        //   'YG provides services and optimizes customer requirements based on the 4C marketing model:<br /><strong style="color : #fa8500">CUSTOMER SOLUTION - CUSTOMER COST - CONVENIENCE - COMMUNICATION</strong><br />Customer solutions - Customer costs - Convenience - Communication',
         '.slide4-container .box-container .box:nth-of-type(1) .box-description':
           'Decoration construction',
         '.slide4-container .box-container .box:nth-of-type(2) .box-description':
@@ -224,10 +223,6 @@ document
           translationMap[newLanguage][key] || element.textContent;
       });
 
-    // updateInnerHTML(
-    //   '.slide4-container .slide4-description p',
-    //   '.slide4-container .slide4-description p'
-    // );
     updateInnerHTML(
       '.slide4-container .commitment p',
       '.slide4-container .commitment p'
@@ -291,7 +286,7 @@ document
 // Thêm lệnh chặn cuộn
 let allowScroll = false;
 
-// Ngăn cuộn
+// Hàm ngăn cuộn
 const preventScroll = (e) => {
   if (!allowScroll) {
     e.preventDefault();
@@ -306,13 +301,22 @@ if (window.innerWidth >= 1025) {
   window.addEventListener('wheel', preventScroll, { passive: false });
   window.addEventListener('touchmove', preventScroll, { passive: false });
 
-  // Sau 5 giây, cho phép cuộn
+  // Sau 5 giây, tự động cuộn và bỏ ngăn cuộn
   setTimeout(() => {
+    // Cho phép cuộn lại
     allowScroll = true;
     window.removeEventListener('wheel', preventScroll);
     window.removeEventListener('touchmove', preventScroll);
+
+    // Tự động cuộn đến phần tử #slide2
+    const targetElement = document.querySelector("#slide2");
+    targetElement.scrollIntoView({
+      behavior: "smooth", // Cuộn mượt mà
+      block: "start",     // Đưa phần tử vào đầu viewport
+    });
   }, 5000);
 }
+
 //chỗ này
 const mediaQuery = window.matchMedia('(max-width: 1390px)');
 
