@@ -18,9 +18,26 @@ document.querySelectorAll('.list-item a, .title').forEach((anchor) => {
     });
   });
 });
+
+let currentLanguage = 'vi'; 
+
+
+function toggleTranslation() {
+  const elements = document.querySelectorAll('[data-en][data-vi]');
+  elements.forEach(el => {
+    if (currentLanguage === 'vi') {
+      el.textContent = el.getAttribute('data-en');
+    } else {
+      el.textContent = el.getAttribute('data-vi');
+    }
+  });
+  currentLanguage = currentLanguage === 'vi' ? 'en' : 'vi';
+}
+
 document
-  .getElementById('language-toggle')
-  .addEventListener('click', function () {
+  .querySelectorAll('.language-toggle').forEach(element => {
+    element.addEventListener('click', function () {
+    toggleTranslation() ;
     const currentLanguage = this.getAttribute('data-language') || 'vi';
     const newLanguage = currentLanguage === 'vi' ? 'en' : 'vi';
 
@@ -100,8 +117,8 @@ document
           'We are a unit specializing in event organization, brand activation, decoration... With a young, enthusiastic, and creative team, alongside experienced leaders in this field. Furthermore, YG continuously asserts its unique identity, fostering innovative thinking and youthful energy to bring real value in every project we carry out for our clients.',
         '.description-team p:nth-of-type(2)':
           'Let YG accompany you and create unique values through the construction of an inspiring and creative experience journey driven by emotions.',
-        '.slide4-container .slide4-description p':
-          'YG provides services and optimizes customer requirements based on the 4C marketing model:<br /><strong style="color : #fa8500">CUSTOMER SOLUTION - CUSTOMER COST - CONVENIENCE - COMMUNICATION</strong><br />Customer solutions - Customer costs - Convenience - Communication',
+        // '.slide4-container .slide4-description p':
+        //   'YG provides services and optimizes customer requirements based on the 4C marketing model:<br /><strong style="color : #fa8500">CUSTOMER SOLUTION - CUSTOMER COST - CONVENIENCE - COMMUNICATION</strong><br />Customer solutions - Customer costs - Convenience - Communication',
         '.slide4-container .box-container .box:nth-of-type(1) .box-description':
           'Decoration construction',
         '.slide4-container .box-container .box:nth-of-type(2) .box-description':
@@ -207,10 +224,10 @@ document
           translationMap[newLanguage][key] || element.textContent;
       });
 
-    updateInnerHTML(
-      '.slide4-container .slide4-description p',
-      '.slide4-container .slide4-description p'
-    );
+    // updateInnerHTML(
+    //   '.slide4-container .slide4-description p',
+    //   '.slide4-container .slide4-description p'
+    // );
     updateInnerHTML(
       '.slide4-container .commitment p',
       '.slide4-container .commitment p'
@@ -267,6 +284,9 @@ document
       '.contain-input textarea#message'
     );
   });
+  })
+  
+   
 
 // Thêm lệnh chặn cuộn
 let allowScroll = false;
