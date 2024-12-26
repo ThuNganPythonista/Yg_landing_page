@@ -965,6 +965,9 @@
   .dropdown:hover .dropdown-content {
     margin-left: -27.7%;
   }
+  .container {
+    scroll-snap-type: none;
+  }
 }
 
 @media (max-width:668px){
