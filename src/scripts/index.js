@@ -96,6 +96,9 @@ document
         '.contain-input textarea#message': 'Nhập lời nhắn của bạn',
         '.form-button': 'Gửi',
         '.slide-project': 'Dự án',
+        '#contact-title': 'Liên hệ',
+        '#contact-address': 'Address: 288/10 Nguyễn Văn Đậu, Bình Thạnh, TP. Hồ Chí Minh',
+        '#follow-us':'Theo dõi chúng tôi'
       },
       en: {
         '#slide2': 'Home',
@@ -146,6 +149,11 @@ document
         '.contain-input textarea#message': 'Enter your message',
         '.form-button': 'Submit',
         '.slide-project': 'Projects',
+        '#contact-title': 'Contact us',
+        '#contact-address': 'Address: 288/10 Nguyen Van Dau, Binh Thanh, Ho Chi Minh City',
+        '#follow-us':'Follow us'
+
+
       },
     };
 
@@ -197,6 +205,9 @@ document
     updateTextContent('.project-link', '.project-link');
     updateTextContent('.customer-link', '.customer-link');
     updateTextContent('.contact-link', '.contact-link');
+    updateTextContent('#contact-title', '#contact-title');
+    updateTextContent('#contact-address', '#contact-address');
+    updateTextContent('#follow-us', '#follow-us');
     updateTextContent(
       '.container-slide3 .yg-team h1',
       '.container-slide3 .yg-team h1'
