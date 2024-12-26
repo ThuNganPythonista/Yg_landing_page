@@ -822,3 +822,6 @@ body.no-scroll {
   display:none;
 }
 
+.line-top br {
+  display: none;
+}

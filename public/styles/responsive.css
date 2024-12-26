@@ -956,6 +956,9 @@
   .commitment p br {
     display: none;
   }
+  .line-top br {
+    display: block;
+  }
 }
 @media (max-width:550px){
   .box-container {
