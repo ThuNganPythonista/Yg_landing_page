@@ -714,7 +714,6 @@
     margin-top: 0.8%;
     margin-left: -13.7%;
   }
-
   .navigation-mobile {
     position: fixed;
     top: 0;
@@ -936,11 +935,35 @@
   .yg-team p{
     font-weight:600;
   }
+  .line-top,
+  .line-bottom {
+    display: inline;
+  }
 
+}
+@media (max-width:474px){
+  .slide4-description strong .line-bottom,
+  .slide4-description strong .line-top{
+            text-align: center;
+            display: table-caption;
+  }
+  .slide4-description strong{
+            display: inline;
+  }
+  .slide4-description .line-top,
+  .slide4-description .line-bottom{
+            display: contents;
+  }
+  .commitment p br {
+    display: none;
+  }
 }
 @media (max-width:550px){
   .box-container {
     display: contents;
+  }
+  .dropdown:hover .dropdown-content {
+    margin-left: -27.7%;
   }
 }
 
