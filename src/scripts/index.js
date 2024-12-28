@@ -375,24 +375,40 @@ function myFunction() {
 }
 
 
-function toggleDropdown() {
+function toggleDropdown(event) {
   const dropdownContent = document.getElementById("dropdown-content");
 
-  // Thêm hoặc gỡ class 'active' để hiện/ẩn dropdown
-  dropdownContent.classList.toggle("active");
+  // Kiểm tra xem dropdown đang mở hay không
+  const isActive = dropdownContent.classList.contains("active");
 
-  // Đảm bảo dropdown đóng khi nhấp ra ngoài
-  document.addEventListener("click", function closeDropdown(event) {
-    // Kiểm tra nếu click ra ngoài dropdown
-    if (!dropdownContent.contains(event.target) && event.target.className !== "icon") {
-      dropdownContent.classList.remove("active");
-      document.removeEventListener("click", closeDropdown); // Xóa event listener sau khi đóng
-    }
-  });
+  // Nếu đang mở, thì đóng dropdown
+  if (isActive) {
+    dropdownContent.classList.remove("active");
+    document.removeEventListener("touchstart", closeDropdownOutside);
+  } else {
+    // Nếu chưa mở, thì mở dropdown
+    dropdownContent.classList.add("active");
+    document.addEventListener("touchstart", closeDropdownOutside);
+  }
+
+  // Ngăn sự kiện click/touchstart lan xuống các thành phần bên ngoài
+  event.stopPropagation();
 }
 
-// Thêm sự kiện touchstart để hỗ trợ trên iPhone
-document.addEventListener("touchstart", function () {
+function closeDropdownOutside(event) {
   const dropdownContent = document.getElementById("dropdown-content");
-  dropdownContent.classList.remove("active");
-});
+  const icon = document.querySelector(".icon");
+
+  // Kiểm tra nếu chạm ra ngoài dropdown hoặc icon
+  if (
+    !dropdownContent.contains(event.target) &&
+    !icon.contains(event.target)
+  ) {
+    dropdownContent.classList.remove("active");
+    document.removeEventListener("touchstart", closeDropdownOutside);
+  }
+}
+
+// Thêm sự kiện cho icon
+document.querySelector(".icon").addEventListener("touchstart", toggleDropdown);
+document.querySelector(".icon").addEventListener("click", toggleDropdown);
