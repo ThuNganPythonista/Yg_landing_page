@@ -307,7 +307,7 @@ const preventScroll = (e) => {
 };
 
 // Chỉ áp dụng nếu kích thước màn hình từ 1025px trở lên
-if (window.innerWidth >= 1025) {
+if (window.innerWidth >= 1199) {
   // Bật sự kiện ngăn cuộn
   window.addEventListener('wheel', preventScroll, { passive: false });
   window.addEventListener('touchmove', preventScroll, { passive: false });
@@ -325,7 +325,7 @@ if (window.innerWidth >= 1025) {
       behavior: "smooth", // Cuộn mượt mà
       block: "start",     // Đưa phần tử vào đầu viewport
     });
-  }, 5000);
+  }, 6000);
 }
 
 //chỗ này
@@ -373,3 +373,26 @@ function myFunction() {
     x.className = 'navigation-mobile';
   }
 }
+
+
+function toggleDropdown() {
+  const dropdownContent = document.getElementById("dropdown-content");
+
+  // Thêm hoặc gỡ class 'active' để hiện/ẩn dropdown
+  dropdownContent.classList.toggle("active");
+
+  // Đảm bảo dropdown đóng khi nhấp ra ngoài
+  document.addEventListener("click", function closeDropdown(event) {
+    // Kiểm tra nếu click ra ngoài dropdown
+    if (!dropdownContent.contains(event.target) && event.target.className !== "icon") {
+      dropdownContent.classList.remove("active");
+      document.removeEventListener("click", closeDropdown); // Xóa event listener sau khi đóng
+    }
+  });
+}
+
+// Thêm sự kiện touchstart để hỗ trợ trên iPhone
+document.addEventListener("touchstart", function () {
+  const dropdownContent = document.getElementById("dropdown-content");
+  dropdownContent.classList.remove("active");
+});

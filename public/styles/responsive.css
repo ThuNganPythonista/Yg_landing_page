@@ -614,15 +614,15 @@
     display: none;
   }
   .mobile-sub{
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-        z-index: 10;
-        padding: 1rem 5rem;
-        display: flex;
-        justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    padding: 1rem 5rem;
+    display: flex;
+    justify-content: flex-end;
   }
   .mobile-sub button{
         border: 1px solid #fa8500;
@@ -870,10 +870,10 @@
       color: #fa8500;
   }
   .slide4-description strong {
-          display: block;
-          text-align: left;
-          font-size: 1.2em;
-          color: #fa8500;
+      display: block;
+      text-align: left;
+      font-size: 1.2em;
+      color: #fa8500;
   }
     
   .slide4-description strong .line-top,
@@ -934,6 +934,7 @@
   }
   .yg-team p{
     font-weight:600;
+    word-break: break-all;
   }
   .line-top,
   .line-bottom {
@@ -942,7 +943,7 @@
 
 }
 @media (max-width:474px){
-  .slide4-description strong .line-bottom,
+  /* .slide4-description strong .line-bottom,
   .slide4-description strong .line-top{
             text-align: center;
   }
@@ -958,7 +959,15 @@
   }
   .line-top br {
     display: block;
+  } */
+  .slide4-description{
+    display:none;
   }
+  .slide4-description-mobile{
+    display:block;
+    text-align: justify;
+  }
+ 
 }
 @media (max-width:550px){
   .box-container {
@@ -974,7 +983,10 @@
 
 @media (max-width:668px){
   .commitment p{
-    text-align:left;
+    text-align:justify;
+  }
+  .commitment p br{
+      display:none
   }
   .logo-grid {
     display: grid;

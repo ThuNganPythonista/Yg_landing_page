@@ -825,3 +825,6 @@ body.no-scroll {
 .line-top br {
   display: none;
 }
+.slide4-description-mobile{
+  display:none;
+}
