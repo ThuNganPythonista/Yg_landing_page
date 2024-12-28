@@ -355,44 +355,44 @@ handleScreenSizeChange(mediaQuery);
 // Lắng nghe sự kiện thay đổi kích thước màn hình
 mediaQuery.addEventListener('change', handleScreenSizeChange);
 
-// /* Open when someone clicks on the span element */
-// function openNav() {
-//   document.getElementById('myNav').style.width = '100%';
-// }
+/* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById('myNav').style.width = '100%';
+}
 
-// /* Close when someone clicks on the "x" symbol inside the overlay */
-// function closeNav() {
-//   document.getElementById('myNav').style.width = '0%';
-// }
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById('myNav').style.width = '0%';
+}
 
-// function myFunction() {
-//   var x = document.getElementById('mynavigation-mobile');
-//   if (x.className === 'navigation-mobile') {
-//     x.className += ' responsive';
-//   } else {
-//     x.className = 'navigation-mobile';
-//   }
-// }
+function myFunction() {
+  var x = document.getElementById('mynavigation-mobile');
+  if (x.className === 'navigation-mobile') {
+    x.className += ' responsive';
+  } else {
+    x.className = 'navigation-mobile';
+  }
+}
 
 
-// function toggleDropdown() {
-//   const dropdownContent = document.getElementById("dropdown-content");
+function toggleDropdown() {
+  const dropdownContent = document.getElementById("dropdown-content");
 
-//   // Thêm hoặc gỡ class 'active' để hiện/ẩn dropdown
-//   dropdownContent.classList.toggle("active");
+  // Thêm hoặc gỡ class 'active' để hiện/ẩn dropdown
+  dropdownContent.classList.toggle("active");
 
-//   // Đảm bảo dropdown đóng khi nhấp ra ngoài
-//   document.addEventListener("click", function closeDropdown(event) {
-//     // Kiểm tra nếu click ra ngoài dropdown
-//     if (!dropdownContent.contains(event.target) && event.target.className !== "icon") {
-//       dropdownContent.classList.remove("active");
-//       document.removeEventListener("click", closeDropdown); // Xóa event listener sau khi đóng
-//     }
-//   });
-// }
+  // Đảm bảo dropdown đóng khi nhấp ra ngoài
+  document.addEventListener("click", function closeDropdown(event) {
+    // Kiểm tra nếu click ra ngoài dropdown
+    if (!dropdownContent.contains(event.target) && event.target.className !== "icon") {
+      dropdownContent.classList.remove("active");
+      document.removeEventListener("click", closeDropdown); // Xóa event listener sau khi đóng
+    }
+  });
+}
 
-// // Thêm sự kiện touchstart để hỗ trợ trên iPhone
-// document.addEventListener("touchstart", function () {
-//   const dropdownContent = document.getElementById("dropdown-content");
-//   dropdownContent.classList.remove("active");
-// });
+// Thêm sự kiện touchstart để hỗ trợ trên iPhone
+document.addEventListener("touchstart", function () {
+  const dropdownContent = document.getElementById("dropdown-content");
+  dropdownContent.classList.remove("active");
+});
