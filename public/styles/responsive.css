@@ -613,6 +613,9 @@
   .navigation {
     display: none;
   }
+  .dropdown:focus .dropdown-content {
+    display: block;
+  }
   .mobile-sub{
     position: fixed;
     top: 0;
@@ -943,23 +946,6 @@
 
 }
 @media (max-width:474px){
-  /* .slide4-description strong .line-bottom,
-  .slide4-description strong .line-top{
-            text-align: center;
-  }
-  .slide4-description strong{
-            display: inline;
-  }
-  .slide4-description .line-top,
-  .slide4-description .line-bottom{
-            display: contents;
-  }
-  .commitment p br {
-    display: none;
-  }
-  .line-top br {
-    display: block;
-  } */
   .slide4-description{
     display:none;
   }
@@ -1016,7 +1002,6 @@
       margin-top:10%;
     }
 }
-
 
 
 /* iPad (landscape) */
