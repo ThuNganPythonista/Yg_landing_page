@@ -498,7 +498,7 @@
     width: 100%;
   }
   .box {
-    height: 16em;
+    height: 17em;
     width: 19em;
     padding: 2.5em;
   }
@@ -513,7 +513,7 @@
     margin-bottom: 8px;
   }
   .box-description {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.4;
   }
   .logo-grid {
@@ -613,9 +613,6 @@
   .navigation {
     display: none;
   }
-  .dropdown:focus .dropdown-content {
-    display: block;
-  }
   .mobile-sub{
     position: fixed;
     top: 0;
@@ -712,11 +709,6 @@
     color: black;
   }
 
-  .dropdown:hover .dropdown-content {
-    display: block;
-    margin-top: 0.8%;
-    margin-left: -13.7%;
-  }
   .navigation-mobile {
     position: fixed;
     top: 0;
@@ -1001,15 +993,4 @@
     .rights-mobile{
       margin-top:10%;
     }
-}
-
-
-/* iPad (landscape) */
-@media (min-width: 1024px) and (max-width: 1366px) {
-  /* Code dành cho iPad (ngang) */
-}
-
-/* Large devices (laptops or desktops) */
-@media (min-width: 1366px) {
-  /* Code dành cho màn hình lớn hơn (desktop, laptop) */
 }

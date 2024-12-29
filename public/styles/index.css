@@ -348,7 +348,7 @@ html {
   font-size: 1.25rem;
   line-height: 1.6;
   color: white;
-  max-width: 800px;
+  max-width: 40em !important;
 }
 .slide4-description p,
 .commitment p,

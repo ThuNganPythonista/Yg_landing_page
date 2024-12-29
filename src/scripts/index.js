@@ -376,6 +376,7 @@ function myFunction() {
 
 
 function toggleDropdown(event) {
+  debugger;
   const dropdownContent = document.getElementById("dropdown-content");
 
   // Kiểm tra xem dropdown đang mở hay không
@@ -409,6 +410,6 @@ function closeDropdownOutside(event) {
   }
 }
 
-// Thêm sự kiện cho icon
-document.querySelector(".icon").addEventListener("touchstart", toggleDropdown);
+// Thêm sự kiện cho con
 document.querySelector(".icon").addEventListener("click", toggleDropdown);
+document.querySelector(".icon").addEventListener("touchstart", toggleDropdown);
