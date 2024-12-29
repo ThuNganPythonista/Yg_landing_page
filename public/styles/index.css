@@ -434,12 +434,6 @@ html {
   justify-content: space-around;
   align-items: center;
 }
-/* .slideshow-container2 {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-} */
 
 .swiper {
   margin: 0;
@@ -467,7 +461,6 @@ html {
 }
 
 .swiper-slide video {
-  /* display: block; */
   height: 100%;
 }
 
