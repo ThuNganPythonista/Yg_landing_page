@@ -20,6 +20,17 @@ document.querySelectorAll('.list-item a, .title').forEach((anchor) => {
   });
 });
 
+document.querySelectorAll('.dropdown-content a').forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  });
+});
+
 let currentLanguage = 'vi'; 
 
 
@@ -355,45 +366,11 @@ handleScreenSizeChange(mediaQuery);
 // Lắng nghe sự kiện thay đổi kích thước màn hình
 mediaQuery.addEventListener('change', handleScreenSizeChange);
 
-/* Open when someone clicks on the span element */
-function openNav() {
-  document.getElementById('myNav').style.width = '100%';
+function toggleDropdown() {
+  const dropdownContent = document.getElementById('dropdown-content');
+  dropdownContent.classList.toggle('show');
 }
-
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-  document.getElementById('myNav').style.width = '0%';
-}
-
-function myFunction() {
-  var x = document.getElementById('mynavigation-mobile');
-  if (x.className === 'navigation-mobile') {
-    x.className += ' responsive';
-  } else {
-    x.className = 'navigation-mobile';
-  }
-}
-
-
-function toggleDropdown(event) {
-  const dropdownContent = document.getElementById("dropdown-content");
-
-  // Kiểm tra xem dropdown đang mở hay không
-  const isActive = dropdownContent.classList.contains("active");
-
-  // Nếu đang mở, thì đóng dropdown
-  if (isActive) {
-    dropdownContent.classList.remove("active");
-    document.removeEventListener("touchstart", closeDropdownOutside);
-  } else {
-    // Nếu chưa mở, thì mở dropdown
-    dropdownContent.classList.add("active");
-    document.addEventListener("touchstart", closeDropdownOutside);
-  }
-
-  // Ngăn sự kiện click/touchstart lan xuống các thành phần bên ngoài
-  event.stopPropagation();
-}
+document.querySelector(".icon").addEventListener("click", toggleDropdown);
 
 function closeDropdownOutside(event) {
   const dropdownContent = document.getElementById("dropdown-content");
@@ -404,11 +381,7 @@ function closeDropdownOutside(event) {
     !dropdownContent.contains(event.target) &&
     !icon.contains(event.target)
   ) {
-    dropdownContent.classList.remove("active");
-    document.removeEventListener("touchstart", closeDropdownOutside);
+    dropdownContent.classList.remove("show");
   }
 }
-
-// Thêm sự kiện cho con
-document.querySelector(".icon").addEventListener("click", toggleDropdown);
-document.querySelector(".icon").addEventListener("touchstart", toggleDropdown);
+document.addEventListener("click", closeDropdownOutside);

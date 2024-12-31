@@ -620,6 +620,16 @@
   height: 100vh;
   /* Đặt chiều cao slide là chiều cao của màn hình */
   }
+  .dropdown-content {
+    display: none;
+    transform-origin: top;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-left: -27.7%;
+  }
+
+  .dropdown-content.show {
+    display: block;
+  }
   .navigation-mobile div{
     z-index:10;
   }
@@ -963,9 +973,6 @@
 @media (max-width:550px){
   .box-container {
     display: contents;
-  }
-  .dropdown:hover .dropdown-content {
-    margin-left: -27.7%;
   }
   .container {
     scroll-snap-type: none;
