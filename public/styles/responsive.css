@@ -607,6 +607,19 @@
 
 /* iPad (portrait) */
 @media (max-width: 1199px) {
+  #slide1 {
+  background-image: url('/public/media/icon/banner.jpg');
+  background-size: cover;
+  /* Tự động điều chỉnh kích thước ảnh để phủ kín */
+  background-position: center;
+  /* Đặt ảnh vào giữa */
+  background-repeat: no-repeat;
+  /* Không lặp lại ảnh */
+  width: 100%;
+  /* Đặt chiều rộng slide */
+  height: 100vh;
+  /* Đặt chiều cao slide là chiều cao của màn hình */
+  }
   .navigation-mobile div{
     z-index:10;
   }
