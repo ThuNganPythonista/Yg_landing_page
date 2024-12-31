@@ -608,9 +608,9 @@
 /* iPad (portrait) */
 @media (max-width: 1199px) {
   #slide1 {
-  background-image: url('/media/icon/banner.jpg');
-  background-size: cover;
-  /* Tự động điều chỉnh kích thước ảnh để phủ kín */
+  background-color: black;
+  background-image: url(/media/icon/banner.jpg);
+  background-size: contain;
   background-position: center;
   /* Đặt ảnh vào giữa */
   background-repeat: no-repeat;

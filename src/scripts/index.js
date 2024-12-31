@@ -376,7 +376,6 @@ function myFunction() {
 
 
 function toggleDropdown(event) {
-  debugger;
   const dropdownContent = document.getElementById("dropdown-content");
 
   // Kiểm tra xem dropdown đang mở hay không
