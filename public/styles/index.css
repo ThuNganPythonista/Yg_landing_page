@@ -161,9 +161,7 @@ html {
 }
 
 .icon {
-  font-size: 1.5rem;
-  margin-right: 12px;
-  color: #fa8500;
+  display:none;
 }
 
 .service-icon {

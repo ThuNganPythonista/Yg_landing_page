@@ -20,7 +20,7 @@ document.querySelectorAll('.list-item a, .title').forEach((anchor) => {
   });
 });
 
-document.querySelectorAll('.dropdown-content a').forEach((anchor) => {
+document.querySelectorAll('#menu a').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
 
@@ -385,3 +385,10 @@ function closeDropdownOutside(event) {
   }
 }
 document.addEventListener("click", closeDropdownOutside);
+// debugger
+const menuToggle = document.getElementById('menuToggle');
+const menu = document.getElementById('menu');
+
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
