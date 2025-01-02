@@ -873,64 +873,35 @@
 }
 
 @media (max-width: 815px){
-  .slide4-description p {
-      text-align: left;
-      line-height: 1.6;
-      word-wrap: break-word;
-
+  .slide4-description {
+      display: none;
     }
-  
-  .slide4-description strong {
-      display: block;
-      text-align: center;
-      margin-top: 10px;
-      font-size: 1.2em;
-      color: #fa8500;
-  }
-  .slide4-description strong {
-      display: block;
-      text-align: left;
-      font-size: 1.2em;
-      color: #fa8500;
-  }
-    
-  .slide4-description strong .line-top,
-  .slide4-description strong .line-bottom {
-          display: block;
-  }
-    
-  .slide4-description strong .line-top {
-          margin-bottom: 5px;
-          color: #fa8500;
-  }
-    
-  .slide4-description strong .line-bottom {
-          margin-top: 5px;
-          text-align:left;
-          font-weight:bold;
-          color: #fa8500;
+  .vertical-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
 
-  .slide4-description p {
-              text-align: left;
-              margin-bottom: 15px;
+  .vertical-list li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
   }
-      
-  .slide4-description .line-top,
-  .slide4-description .line-bottom {
-              display: block;
-              font-size: 1em;
+
+  .vertical-list li::before {
+    content: "•";
+    font-size: 24px;
+    color: #fa8500;
+    margin-right: 10px;
   }
-      
-  .slide4-description .line-top {
-          
-              color: white;
+
+  .slide4-description {
+    display: none;
   }
-      
-  .slide4-description .line-bottom {
-              font-weight: normal;
-              color: white;
-              margin-top: 5px;
+
+  .slide4-description-mobile {
+    display: grid;
+    text-align: justify;
   }
             
   
@@ -961,6 +932,24 @@
 
 }
 @media (max-width:474px){
+  .vertical-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .vertical-list li {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+  
+    .vertical-list li::before {
+      content: "•";
+      font-size: 24px;
+      color: #fa8500;
+      margin-right: 10px;
+    }
   .slide4-description{
     display:none;
   }
