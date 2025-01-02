@@ -1045,7 +1045,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding:40%;
+  /* padding:40%; */
 }
 
 .menu-toggle .bar {
