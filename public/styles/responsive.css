@@ -903,7 +903,9 @@
     display: grid;
     text-align: justify;
   }
-            
+  .slide4-container{
+    margin-top:0;
+  }          
   
 }
 
