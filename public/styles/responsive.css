@@ -734,7 +734,7 @@
 
   .navigation-mobile {
     position: fixed;
-    top: 0;
+    height: 3.3em;
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.7);
@@ -1045,8 +1045,8 @@
   background: none;
   border: none;
   cursor: pointer;
-  /* padding:40%; */
-}
+  margin-top: 0.6em;
+  }
 
 .menu-toggle .bar {
   width: 25px;
