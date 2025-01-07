@@ -62,12 +62,13 @@ label {
   z-index: 1000;
   object-fit: cover !important;
 }
+
 .navigation a,
 .list-item a {
   color: white;
   text-decoration: none;
   padding: 0.75rem 1.25rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 600;
   border-radius: 5px;
   transition:
@@ -77,8 +78,8 @@ label {
     opacity 0.3s ease-in-out;
 }
 .navigation a {
-  font-weight: 0 !important;
-  font-size: 0.9em;
+  font-weight: 100;
+  font-size: 1em;
 }
 .navigation a:focus,
 .navigation a:hover,
@@ -134,8 +135,8 @@ html {
   margin-top: 5%;
 }
 .title {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 4em;
+  font-weight: 500;
   margin-right: 100%;
   width: 26em;
   text-align: center;
@@ -144,7 +145,7 @@ html {
 }
 
 .highlight {
-  color: orange;
+  color: #ec6629;
 }
 
 .list {
@@ -715,28 +716,22 @@ body.no-scroll {
   transition: transform 0.3s ease;
 }
 
-.list-item div {
+/* .list-item div {
   position: relative;
   display: inline-block;
   padding: 10px;
-  /* Khoảng cách từ icon tới border */
   border: 1px solid white;
-  /* Viền chính */
   border-radius: 4px;
-  /* Tạo cảm giác mềm mại */
-}
+} */
 
-.list-item div::before,
+/* .list-item div::before,
 .list-item div::after {
   content: '';
   position: absolute;
   width: 6px;
-  /* Độ dài của góc */
   height: 6px;
-  /* Độ dài của góc */
   border: 2px solid white;
-  /* Viền góc dày 2px */
-}
+} */
 
 .list-item div::before {
   top: -1px;
@@ -826,4 +821,13 @@ body.no-scroll {
 }
 .imgNav.hidden{
     display: none;
+}
+#slide2 {
+  /* background-color: black; */
+  background-image: url(/media/icon/introduction-banner.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
 }
