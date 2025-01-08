@@ -65,3 +65,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fadeInSections.forEach((section) => observer.observe(section));
 });
+
+// toggle the 'hidden' class
+function handleResponsiveImage(): void {
+  const imageElement = document.querySelector<HTMLImageElement>('.mobile-image');
+
+  if (imageElement) {
+    if (window.innerWidth <= 1199) {
+      imageElement.classList.remove('hidden');
+    } else {
+      imageElement.classList.add('hidden');
+    }
+  }
+}
+
+window.addEventListener('resize', handleResponsiveImage);
+
+handleResponsiveImage();

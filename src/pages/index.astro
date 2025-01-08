@@ -37,17 +37,48 @@ import Nav from "../components/nav.astro";
     <Nav />
 
     <section id="slide1" class="slide">
-      <video
-        autoplay
-        muted
-        loop
-        playsinline
-        class="w-[100%] h-[100%] object-cover"
-        style="max-height: 100%; width: auto; object-fit: cover;"
+      <div
+        id="slide1"
+        class="slide slidetop"
+        style="position: relative; overflow: hidden; width: 100%;"
       >
-        <!-- //chỗ này  -->
-        <source src="/media/logo-fix-5.mp4" type="video/mp4" />
-      </video>
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="w-[100%] h-[100%] object-cover"
+          style="position: absolute; max-height: 100%; max-width: 100%; left: 0; top: 0; right: 0; bottom: 0; color: transparent; object-fit:cover"
+        >
+          <!-- //chỗ này  -->
+          <source src="/media/logo-fix-5.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div
+        style="position: relative; height: 600px; overflow: hidden; width: 100%;"
+        class="hidden"
+      >
+        <img
+          src="banner-mobile.svg"
+          style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; color: transparent; object-fit:cover"
+          srcset="
+        /media/icon/banner-mobile.svg 32w,
+        /media/icon/banner-mobile.svg 64w,
+        /media/icon/banner-mobile.svg 128w,
+        /media/icon/banner-mobile.svg 256w,
+        /media/icon/banner-mobile.svg 384w,
+        /media/icon/banner-mobile.svg 480w,
+        /media/icon/banner-mobile.svg 640w,
+        /media/icon/banner-mobile.svg 768w,
+        /media/icon/banner-mobile.svg 960w,
+        /media/icon/banner-mobile.svg 1024w,
+        /media/icon/banner-mobile.svg 1199w
+      "
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          alt="A responsive image"
+          class="mobile-image hidden"
+        />
+      </div>
     </section>
 
     <section id="slide2" class="slide">
