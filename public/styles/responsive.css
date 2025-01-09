@@ -1023,8 +1023,14 @@
   .slide4-description-mobile{
     display:block;
     text-align: justify;
+    margin-top: 2em;
   }
- 
+ .slide-project {
+   margin-top: -3em;
+  }
+  .slide6-title{
+  margin-top: 1em;
+  }
 }
 @media (max-width:550px){
   .box-container {
