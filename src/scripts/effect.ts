@@ -82,3 +82,103 @@ function handleResponsiveImage(): void {
 window.addEventListener('resize', handleResponsiveImage);
 
 handleResponsiveImage();
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   // Lấy tất cả các thẻ <a> trong danh sách
+//   const anchorLinks = document.querySelectorAll(".list-item a");
+
+//   // Thêm sự kiện hover cho từng thẻ <a>
+//   anchorLinks.forEach((link) => {
+//     link.addEventListener("mouseenter", () => {
+//       // Khi hover, thêm padding 20px
+//       (link as HTMLAnchorElement).style.padding = "20px";
+//       (link as HTMLAnchorElement).style.transition = "all 0.3s ease";
+//     });
+
+//     link.addEventListener("mouseleave", () => {
+//       // Khi không hover nữa, reset padding về giá trị mặc định
+//       (link as HTMLAnchorElement).style.padding = "0";
+//     });
+//   });
+// });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   // Lấy danh sách ul và các list-item
+//   const list = document.querySelector(".list") as HTMLUListElement;
+//   const listItems = document.querySelectorAll(".list-item");
+
+//   // Thêm sự kiện hover cho từng list-item
+//   listItems.forEach((item) => {
+//     item.addEventListener("mouseenter", () => {
+//       // Khi hover vào list-item, thay đổi gap của list
+//       list.style.gap = "60px";
+//     });
+
+//     item.addEventListener("mouseleave", () => {
+//       // Khi không hover nữa, khôi phục gap ban đầu
+//       list.style.gap = "10px";
+//     });
+//   });
+// });
+// document.addEventListener("DOMContentLoaded", () => {
+//   const anchorLinks = document.querySelectorAll(".list-item");
+
+//   anchorLinks.forEach((link) => {
+//     const listItem = link.closest(".list-item") as HTMLElement; 
+
+//     link.addEventListener("mouseenter", () => {
+//       if (listItem) {
+//         listItem.style.padding = "20px 10px";
+//         listItem.style.transition = "all 0.3s ease"; 
+//       }
+//     });
+
+//     link.addEventListener("mouseleave", () => {
+//       if (listItem) {
+//         listItem.style.padding = "initial";
+
+//       }
+//     });
+//   });
+// });
+// document.addEventListener("DOMContentLoaded", () => {
+//   const links = document.querySelectorAll<HTMLAnchorElement>(".list-item a");
+//   const icons = document.querySelectorAll<HTMLElement>(".list-item i"); 
+//   icons.forEach((icon) => {
+//     icon.addEventListener("mouseenter", () => {
+//       icons.forEach((otherIcon) => {
+//         if (otherIcon !== icon) {
+//           otherIcon.style.fontSize = "15px"; 
+//         }
+//       });
+//     });
+
+//     icon.addEventListener("mouseleave", () => {
+//       icons.forEach((otherIcon) => {
+//         otherIcon.style.fontSize = "24px"; 
+//       });
+//     });
+//   });
+
+//   links.forEach((link) => {
+//     link.addEventListener("mouseenter", () => {
+//       links.forEach((otherLink) => {
+//         if (otherLink !== link) {
+//           otherLink.style.fontSize = "small"; 
+//           otherLink.style.height = "1.7em";
+//         }
+//       });
+
+//       link.style.height = "2.5em";
+//     });
+
+//     link.addEventListener("mouseleave", () => {
+//       links.forEach((otherLink) => {
+//         otherLink.style.fontSize = "1.2rem"; 
+//         otherLink.style.height = "initial"; 
+//       });
+//     });
+//   });
+// });
+

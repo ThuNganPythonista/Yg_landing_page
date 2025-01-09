@@ -36,11 +36,11 @@ import Nav from "../components/nav.astro";
 
     <Nav />
 
-    <section id="slide1" class="slide">
+    <section id="slide1" class="">
       <div
         id="slide1"
         class="slide slidetop"
-        style="position: relative; overflow: hidden; width: 100%;"
+        style="position: relative; overflow: hidden; width: 100%;scroll-snap-align: end;"
       >
         <video
           autoplay
@@ -56,10 +56,10 @@ import Nav from "../components/nav.astro";
       </div>
       <div
         style="position: relative; height: 600px; overflow: hidden; width: 100%;"
-        class="hidden"
+        class="div-mobile-image"
       >
         <img
-          src="banner-mobile.svg"
+          src="/media/banner-mobile.svg"
           style="position: absolute; height: 100%; width: 100%; left: 0; top: 0; right: 0; bottom: 0; color: transparent; object-fit:cover"
           srcset="
         /media/icon/banner-mobile.svg 32w,
@@ -76,7 +76,7 @@ import Nav from "../components/nav.astro";
       "
           sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
           alt="A responsive image"
-          class="mobile-image hidden"
+          class="mobile-image"
         />
       </div>
     </section>
@@ -101,7 +101,7 @@ import Nav from "../components/nav.astro";
       <Client />
     </section>
 
-    <section id="slide7" class="slide" style="background: grey;">
+    <section id="slide7" class="slide">
       <ContactUs />
     </section>
   </div>
