@@ -866,7 +866,7 @@ body.no-scroll {
 
 .list-item a {
   text-decoration: none;
-  font-size: 18px;
+  /* font-size: 18px; */
   font-weight: bold;
   color: white;
   transition: color 0.3s ease, transform 0.3s ease;

@@ -142,43 +142,43 @@ handleResponsiveImage();
 //     });
 //   });
 // });
-// document.addEventListener("DOMContentLoaded", () => {
-//   const links = document.querySelectorAll<HTMLAnchorElement>(".list-item a");
-//   const icons = document.querySelectorAll<HTMLElement>(".list-item i"); 
-//   icons.forEach((icon) => {
-//     icon.addEventListener("mouseenter", () => {
-//       icons.forEach((otherIcon) => {
-//         if (otherIcon !== icon) {
-//           otherIcon.style.fontSize = "15px"; 
-//         }
-//       });
-//     });
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll<HTMLAnchorElement>(".list-item a");
+  const icons = document.querySelectorAll<HTMLElement>(".list-item i"); 
+  icons.forEach((icon) => {
+    icon.addEventListener("mouseenter", () => {
+      icons.forEach((otherIcon) => {
+        if (otherIcon !== icon) {
+          otherIcon.style.fontSize = "15px"; 
+        }
+      });
+    });
 
-//     icon.addEventListener("mouseleave", () => {
-//       icons.forEach((otherIcon) => {
-//         otherIcon.style.fontSize = "24px"; 
-//       });
-//     });
-//   });
+    icon.addEventListener("mouseleave", () => {
+      icons.forEach((otherIcon) => {
+        otherIcon.style.fontSize = "24px"; 
+      });
+    });
+  });
 
-//   links.forEach((link) => {
-//     link.addEventListener("mouseenter", () => {
-//       links.forEach((otherLink) => {
-//         if (otherLink !== link) {
-//           otherLink.style.fontSize = "small"; 
-//           otherLink.style.height = "1.7em";
-//         }
-//       });
+  links.forEach((link) => {
+    link.addEventListener("mouseenter", () => {
+      links.forEach((otherLink) => {
+        if (otherLink !== link) {
+          otherLink.style.fontSize = "small"; 
+          otherLink.style.height = "1.7em";
+        }
+      });
 
-//       link.style.height = "2.5em";
-//     });
+      link.style.height = "2.5em";
+    });
 
-//     link.addEventListener("mouseleave", () => {
-//       links.forEach((otherLink) => {
-//         otherLink.style.fontSize = "1.2rem"; 
-//         otherLink.style.height = "initial"; 
-//       });
-//     });
-//   });
-// });
+    link.addEventListener("mouseleave", () => {
+      links.forEach((otherLink) => {
+        otherLink.style.fontSize = "1.2rem"; 
+        otherLink.style.height = "initial"; 
+      });
+    });
+  });
+});
 
