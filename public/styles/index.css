@@ -141,6 +141,25 @@ html {
   padding: 0;
 
 }
+.slided {
+  min-height: 118vh;
+}
+.slide {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+
+}
 
 /* .slidetop{
   min-height:800vh !important
@@ -300,7 +319,6 @@ html {
   gap: 2rem;
   padding: 2rem;
   text-align: center;
-  margin-top: 5em;
 }
 
 /* Div 1: Đoạn chữ mô tả */
@@ -465,7 +483,7 @@ html {
   display: flex;
   gap: 6em;
   width: 75%;
-  margin-top: 2em;
+  margin-top: 5em;
   box-sizing: border-box;
   margin-left: 12%;
 }
@@ -523,7 +541,7 @@ a {
 }
 .contact-form {
   border-radius: 7px;
-  width: 30%;
+  width: 33%;
 }
 
 .div-class {
@@ -607,20 +625,14 @@ a {
 }
 
 #message {
-    font-family: sans-serif;
-    height: 13px;
-    color: white;
-    border: 1px solid #ff8500;
-    outline: non;
-    padding: 8px;
-    border-radius: 5px;
-    font-size: 12px;
-    resize: vertical;
-    width: 100%;
-    min-height: 30.5px;
-    box-sizing: border-box;
-    margin-top: 9px;
-    text-decoration: none;
+        color: black;
+        border: 1px solid #ff8500;
+        outline: none;
+        padding: 8px;
+        border-radius: 5px;
+        margin-top: 9px;
+        width: 100%;
+        text-decoration: none;
 }
 
 #message::placeholder {
@@ -675,7 +687,7 @@ a {
 }
 
 .slide-span-project {
-  margin-top: 2em;
+  padding: 1em;
 }
 .slide-span-project2 {
   margin-top: 2em;
@@ -908,6 +920,19 @@ body.no-scroll {
 .div-mobile-image{
   display:none;
 }
+.contact-form {
+  background-color: rgba(34, 34, 34, 0.4);
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  /* border: 2px solid rgba(34, 34, 34, 0.8); */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 1);
+  transition: all 0.3s ease;
+}
+
+/* .contact-form:hover {
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+} */
 
 .form-button {
   margin-bottom: 1em;
@@ -918,7 +943,7 @@ body.no-scroll {
   width: 92%;
   border-radius: 9px;
   padding: 10px;
-  margin-top: 1em;
+  margin-top: 1.5em;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -928,20 +953,17 @@ body.no-scroll {
 
 .form-button:hover {
   background: linear-gradient(45deg, #ff4d00, #ff7a00);
-  /* Đổi màu gradient khi hover */
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-  /* Tăng độ mạnh của bóng */
   transform: translateY(-2px);
-  /* Đẩy nút lên một chút */
 }
 
 .form-button:active {
   transform: translateY(0);
-  /* Trở lại vị trí cũ khi nhấn */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  /* Bóng nhỏ lại */
 }
-
+/* .slide.slide-final {
+  min-height:103vh;
+} */
 
 /* /////day nha */
 
