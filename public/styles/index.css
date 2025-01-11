@@ -484,6 +484,13 @@ html {
 .inf {
   font-weight: 300;
 }
+.contact-form {
+  background-color: rgba(34, 34, 34, 0.9);
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 .item-contact {
   display: flex;
   gap: 1em;
@@ -515,8 +522,6 @@ a {
   text-decoration: none;
 }
 .contact-form {
-  background-color: white;
-  color: black;
   border-radius: 7px;
   width: 30%;
 }
@@ -572,12 +577,12 @@ a {
 }
 .contact-form h2 {
   color: #fa8500;
+  font-family: sans-serif;
 }
 
 .contain-input input {
-  background-color: #ff8500;
-  color: white;
-  border: none;
+  color: black;
+  border: 1px solid #ff8500;
   outline: none;
   padding: 8px;
   border-radius: 5px;
@@ -602,21 +607,20 @@ a {
 }
 
 #message {
-  font-family: sans-serif;
-  height: 13px;
-  background-color: #ff8500;
-  color: white;
-  border: none;
-  outline: non;
-  padding: 8px;
-  border-radius: 5px;
-  font-size: 12px;
-  resize: vertical;
-  width: 100%;
-  min-height: 30.5px;
-  box-sizing: border-box;
-  margin-top: 9px;
-  text-decoration: none;
+    font-family: sans-serif;
+    height: 13px;
+    color: white;
+    border: 1px solid #ff8500;
+    outline: non;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    resize: vertical;
+    width: 100%;
+    min-height: 30.5px;
+    box-sizing: border-box;
+    margin-top: 9px;
+    text-decoration: none;
 }
 
 #message::placeholder {
@@ -630,18 +634,7 @@ a {
   text-decoration: none;
 }
 
-.form-button {
-  padding: 1em;
-  width: 10%;
-  text-decoration: underline;
-  text-decoration-color: #ff8500;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
-  background-color: transparent;
-  border: none;
-  color: black;
-  cursor: pointer;
-}
+
 
 .contain-input input:-webkit-autofill {
   -webkit-text-fill-color: white !important;
@@ -652,21 +645,18 @@ a {
   margin-top: -2em;
 }
 
-/* CSS for fade-in effect */
 .fade-in-section {
   opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.7s ease-out,
-    transform 0.7s ease-out;
+  transform: translateY(100px);
+  /* Bắt đầu thấp hơn */
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
-/* Class to apply when element is in viewport */
 .fade-in-section.visible {
   opacity: 1;
   transform: translateY(0);
+  /* Về đúng vị trí ban đầu */
 }
-
 .social-icons a i,
 .social-icons a img {
   font-size: 24px; /* Giữ kích thước biểu tượng không thay đổi */
@@ -918,3 +908,40 @@ body.no-scroll {
 .div-mobile-image{
   display:none;
 }
+
+.form-button {
+  margin-bottom: 1em;
+  align-self: center;
+  background: linear-gradient(45deg, #ff7a00, #ff4d00);
+  color: #fff;
+  border: none;
+  width: 92%;
+  border-radius: 9px;
+  padding: 10px;
+  margin-top: 1em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-button:hover {
+  background: linear-gradient(45deg, #ff4d00, #ff7a00);
+  /* Đổi màu gradient khi hover */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  /* Tăng độ mạnh của bóng */
+  transform: translateY(-2px);
+  /* Đẩy nút lên một chút */
+}
+
+.form-button:active {
+  transform: translateY(0);
+  /* Trở lại vị trí cũ khi nhấn */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  /* Bóng nhỏ lại */
+}
+
+
+/* /////day nha */
+

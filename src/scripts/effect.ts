@@ -28,20 +28,15 @@ waitForPageLoad();
 const navigation = document.getElementById('navigation') as HTMLElement;
 const container = document.querySelector('.container') as HTMLElement;
 const navImg = document.querySelector('.imgNav') as HTMLElement;
-
+const nav_mobile = document.querySelector('.navigation-mobile') as HTMLElement;
 container.addEventListener('scroll', () => {
   const scrollTop = container.scrollTop;
 
   // Ẩn/hiện thanh điều hướng
   navigation.classList.toggle('hidden', scrollTop <= window.innerHeight / 2);
+  nav_mobile.classList.toggle('hidden', scrollTop <= window.innerHeight / 2);
+  navImg.classList.toggle('hidden', scrollTop <= window.innerHeight / 2);
 
-  // Kiểm tra nếu màn hình rộng >= 1025px
-  if (window.innerWidth >= 1025) {
-    navImg.classList.toggle('hidden', scrollTop <= window.innerHeight / 2);
-  } else {
-    // Luôn hiển thị navImg dưới 1025px
-    navImg.classList.remove('hidden');
-  }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -142,43 +137,55 @@ handleResponsiveImage();
 //     });
 //   });
 // });
-document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll<HTMLAnchorElement>(".list-item a");
-  const icons = document.querySelectorAll<HTMLElement>(".list-item i"); 
-  icons.forEach((icon) => {
-    icon.addEventListener("mouseenter", () => {
-      icons.forEach((otherIcon) => {
-        if (otherIcon !== icon) {
-          otherIcon.style.fontSize = "15px"; 
-        }
-      });
-    });
+// document.addEventListener("DOMContentLoaded", () => {
+//   const links = document.querySelectorAll<HTMLAnchorElement>(".list-item a");
+//   const icons = document.querySelectorAll<HTMLElement>(".list-item i"); 
+//   icons.forEach((icon) => {
+//     icon.addEventListener("mouseenter", () => {
+//       icons.forEach((otherIcon) => {
+//         if (otherIcon !== icon) {
+//           otherIcon.style.fontSize = "15px"; 
+//         }
+//       });
+//     });
 
-    icon.addEventListener("mouseleave", () => {
-      icons.forEach((otherIcon) => {
-        otherIcon.style.fontSize = "24px"; 
-      });
-    });
+//     icon.addEventListener("mouseleave", () => {
+//       icons.forEach((otherIcon) => {
+//         otherIcon.style.fontSize = "24px"; 
+//       });
+//     });
+//   });
+
+//   links.forEach((link) => {
+//     link.addEventListener("mouseenter", () => {
+//       links.forEach((otherLink) => {
+//         if (otherLink !== link) {
+//           otherLink.style.fontSize = "small"; 
+//           otherLink.style.height = "1.7em";
+//         }
+//       });
+
+//       link.style.height = "2.5em";
+//     });
+
+//     link.addEventListener("mouseleave", () => {
+//       links.forEach((otherLink) => {
+//         otherLink.style.fontSize = "1.2rem"; 
+//         otherLink.style.height = "initial"; 
+//       });
+//     });
+//   });
+// });
+
+const sections = document.querySelectorAll('.fade-in-section');
+
+const handleScroll = () => {
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+      section.classList.add('visible'); // Gắn lớp để kích hoạt hiệu ứng
+    }
   });
+};
 
-  links.forEach((link) => {
-    link.addEventListener("mouseenter", () => {
-      links.forEach((otherLink) => {
-        if (otherLink !== link) {
-          otherLink.style.fontSize = "small"; 
-          otherLink.style.height = "1.7em";
-        }
-      });
-
-      link.style.height = "2.5em";
-    });
-
-    link.addEventListener("mouseleave", () => {
-      links.forEach((otherLink) => {
-        otherLink.style.fontSize = "1.2rem"; 
-        otherLink.style.height = "initial"; 
-      });
-    });
-  });
-});
-
+window.addEventListener('scroll', handleScroll);
