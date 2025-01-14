@@ -487,7 +487,10 @@
     padding: 11px;
   }
   #slide5 h1 {
-    font-size: xxx-large;
+    font-size: 5.5em;
+  }
+  .slide6-title {
+    font-size: 5.5em;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1599px) {
@@ -605,7 +608,10 @@
     font-size: x-large;
   }
   #slide5 h1 {
-    font-size: xxx-large;
+    font-size: 4em;
+  }
+  .slide6-title {
+      font-size: 4em;
   }
 }
 
