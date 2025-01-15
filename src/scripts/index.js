@@ -73,9 +73,9 @@ document
         '.container-slide3 .yg-team p':
           "It's not just participation to customer<br />It needs to be an emotional experience",
         '.description-team .title-text': 'YG – YOUNG GENERATION AGENCY',
-        '.description-team p:nth-of-type(1)':
+        '.inside-description-team p:nth-of-type(1)':
           'Là đơn vị chuyên cung cấp các dịch vụ tổ chức sự kiện, activation cho thương hiệu, decoration… Với đội ngũ nhân sự trẻ trung, nhiệt huyết, đầy sáng tạo, cùng những người dẫn dắt nhiều kinh nghiệm trong lĩnh vực này. Bên cạnh đó, YG không ngừng khẳng định bản sắc riêng, phát huy tư duy đổi mới đầy nhiệt huyết của sức trẻ nhằm mang đến những giá trị thật trong từng công việc mà chúng tôi thực hiện cho khách hàng.',
-        '.description-team p:nth-of-type(2)':
+        '.inside-description-team p:nth-of-type(2)':
           'Hãy để YG được đồng hành và cùng tạo ra những giá trị khác biệt thông qua việc xây dựng hành trình trải nghiệm đầy cảm hứng sáng tạo từ cảm xúc.',
         '.slide4-container .slide4-description p':
           'YG cung cấp dịch vụ và tối ưu những yêu cầu của khách hàng dựa trên mô hình 4C trong marketing:<br /><strong style="color : #fa8500">CUSTOMER SOLUTION - CUSTOMER COST - CONVENIENCE - COMMUNICATION</strong><br />Giải pháp cho khách hàng - Chi phí khách hàng bỏ ra - Sự tiện lợi - Truyền thông',
@@ -128,9 +128,9 @@ document
         '.container-slide3 .yg-team p':
           "It's not just participation to customer<br />It needs to be an emotional experience",
         '.description-team .title-text': 'YG – YOUNG GENERATION AGENCY',
-        '.description-team p:nth-of-type(1)':
+        '.inside-description-team p:nth-of-type(1)':
           'We are a unit specializing in event organization, brand activation, decoration... With a young, enthusiastic, and creative team, alongside experienced leaders in this field. Furthermore, YG continuously asserts its unique identity, fostering innovative thinking and youthful energy to bring real value in every project we carry out for our clients.',
-        '.description-team p:nth-of-type(2)':
+        '.inside-description-team p:nth-of-type(2)':
           'Let YG accompany you and create unique values through the construction of an inspiring and creative experience journey driven by emotions.',
         '.slide4-container .box-container .box:nth-of-type(1) .box-description':
           'Decoration construction',
@@ -232,15 +232,15 @@ document
       '.container-slide3 .yg-team p'
     );
     updateTextContent(
-      '.description-team .title-text',
-      '.description-team .title-text'
+      '.inside-description-team .title-text',
+      '.inside-description-team .title-text'
     );
 
     // Cập nhật các phần có danh sách hoặc nội dung phức tạp
     document
-      .querySelectorAll('.description-team p')
+      .querySelectorAll('.inside-description-team p')
       .forEach((element, index) => {
-        const key = `.description-team p:nth-of-type(${index + 1})`;
+        const key = `.inside-description-team p:nth-of-type(${index + 1})`;
         element.textContent =
           translationMap[newLanguage][key] || element.textContent;
       });

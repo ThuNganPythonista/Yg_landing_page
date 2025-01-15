@@ -251,6 +251,16 @@ html {
 .inside-slide3{
   height: 100%;
   display: flex;
+  margin-top:2.5em;
+}
+.inside-description-team p {
+  text-align: justify;
+  width: 47em;
+}
+.inside-description-team {
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
 }
 .imge{
   height: 100%;
@@ -310,6 +320,7 @@ html {
   text-align: left;
   font-size: 3.5em;
   color: #ec6629;
+  width: 14em;
 }
 
 .slide4-container {
@@ -355,6 +366,7 @@ html {
   line-height: 1.6;
   color: white;
   max-width: 40em !important;
+  margin-bottom: -3em;
 }
 .slide4-description p,
 .commitment p,
