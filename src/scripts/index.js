@@ -392,3 +392,35 @@ const menu = document.getElementById('menu');
 menuToggle.addEventListener('click', () => {
   menu.classList.toggle('show');
 });
+
+// Lấy phần tử container và hình ảnh
+const imageContainer = document.querySelector(".imge");
+const image = document.querySelector(".imge img");
+
+// Thêm sự kiện di chuột
+imageContainer.addEventListener("mousemove", (event) => {
+  // Lấy kích thước và vị trí của container
+  const rect = imageContainer.getBoundingClientRect();
+
+  // Tính toán vị trí con trỏ chuột so với container
+  const x = event.clientX - rect.left;
+  const y = event.clientY - rect.top;
+
+  // Tính toán độ nghiêng (giới hạn ở góc xoay nhất định)
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
+  const rotateX = Math.max(Math.min((centerY - y) / 10, 30), -30); // Giới hạn từ -30 đến 30 độ
+  const rotateY = Math.max(Math.min((x - centerX) / 10, 30), -30);
+;
+
+  // Áp dụng hiệu ứng nghiêng
+  image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+});
+
+// Đặt lại khi chuột rời khỏi container
+imageContainer.addEventListener("mouseleave", () => {
+  image.style.transform = "rotateX(0) rotateY(0)";
+});
+
+
+

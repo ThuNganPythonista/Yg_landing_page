@@ -261,11 +261,18 @@ html {
   flex-direction: column;
   display: flex;
   gap: 10px;
+  margin-top: 2.5em;
 }
 .imge{
   height: 100%;
+  position: relative;
+  perspective: 1000px;
 }
-
+.imge img {
+  transition: transform 0.1s ease-out;
+  transform-origin: center;
+}
+ 
 .yg-team,
 .description-team {
   flex: 1; /* Mỗi div chiếm không gian tương đối bằng nhau */
@@ -327,7 +334,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 4.5rem;
   padding: 2rem;
   text-align: center;
 }
@@ -414,7 +421,7 @@ html {
   font-size: 3.5rem;
   font-weight: bold;
   color: #fa8500;
-  margin-bottom: 16px;
+  margin-top: 1em;
   text-align: center;
 }
 
